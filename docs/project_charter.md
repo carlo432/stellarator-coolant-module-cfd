@@ -34,7 +34,7 @@ Our next-step-above target:
 
 ## Minimum Successful Project
 
-The project succeeds if the team produces:
+The project succeeds if it produces:
 
 1. A defensible simplified 3D coolant geometry.
 2. A mesh with documented quality.

@@ -4,7 +4,7 @@ Date: 2026-06-20
 
 Roadmap item: AO
 
-Purpose: one read-first page for the team/advisor.
+Purpose: one read-first page summarizing the project.
 
 ## Central Finding
 

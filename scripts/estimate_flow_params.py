@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Estimate first-pass flow and heat-transfer planning values.
 
-This script is intentionally simple and dependency-free. It helps the team
+This script is intentionally simple and dependency-free. It helps
 translate target Reynolds numbers into inlet velocities and mass flow rates for
 the baseline module.
 """

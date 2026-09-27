@@ -1,6 +1,6 @@
 # Stellarator First-Wall Coolant Module — CFD & Conjugate Heat Transfer
 
-> **Status: ongoing.** This is an active senior-design research project. Results and documents are
+> **Status: ongoing.** This is an active individual research project. Results and documents are
 > working drafts and will change.
 
 A thermal-hydraulic feasibility study of a simplified, stellarator-relevant FLiBe coolant module, built
@@ -94,7 +94,7 @@ cd cases/baseline_module/openfoam_cases/v14_scalar_temperature_flibe_re10000_hea
 
 ## Acknowledgements
 
-Part of a senior-design team project. Geometry and precedent come from published ARC blanket CFD work
+Geometry and precedent come from published ARC blanket CFD work
 (Ferrero; Leffler); full citations are in `references/references.bib`. AI coding assistants were used
 to help with implementation and to independently check results.
 
