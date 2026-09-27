@@ -1,0 +1,2 @@
+dT_prefactor_for_U_m_s,dT_exponent_n,dT_logfit_R2,Nu_prefactor_for_Re,Nu_exponent_m,Nu_logfit_R2,interpretation
+31.0438,-0.7047,0.99969,0.144713,0.7047,0.99971,wall-resolved CHT sweep gives dT~U^n and Nu~Re^m; fitted exponent is shallower than Dittus-Boelter 0.8 but close over Re 5k-20k

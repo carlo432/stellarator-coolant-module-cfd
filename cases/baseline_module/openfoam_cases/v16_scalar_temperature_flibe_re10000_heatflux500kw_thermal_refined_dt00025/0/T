@@ -1,0 +1,40 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 800;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 800;
+    }
+
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 800;
+        value           uniform 800;
+    }
+
+    heated_wall
+    {
+        type            fixedGradient;
+        // Planning value: 500 kW/m^2 / 1.0 W/m/K = 500000 K/m.
+        gradient        uniform 500000;
+        value           uniform 800;
+    }
+
+    adiabatic_walls
+    {
+        type            zeroGradient;
+    }
+}

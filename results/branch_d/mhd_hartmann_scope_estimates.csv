@@ -1,0 +1,10 @@
+case_id,roadmap_item,field_context,B_t,length_scale_m,sigma_s_m,rho_kg_m3,mu_pa_s,U_m_s,hartmann_number,interaction_number,interpretation
+O1,O,W7X_context,2.5,0.01000,251,1940,0.006,1.1598,5.1,0.007,small but not zero
+O2,O,W7X_context,2.5,0.02667,251,1940,0.006,1.1598,13.6,0.019,weak interaction estimate
+O3,O,Helios_like,6.0,0.01000,251,1940,0.006,1.1598,12.3,0.040,moderate Hartmann low interaction
+O4,O,Helios_like,6.0,0.02667,251,1940,0.006,1.1598,32.7,0.107,moderate effect possible
+O5,O,ARIES_CS_like,6.5,0.01000,251,1940,0.006,1.1598,13.3,0.047,moderate Hartmann low interaction
+O6,O,ARIES_CS_like,6.5,0.02667,251,1940,0.006,1.1598,35.5,0.126,moderate effect possible
+O7,O,ARC_high_field,9.2,0.01000,251,1940,0.006,1.1598,18.8,0.094,high-field context
+O8,O,ARC_high_field,9.2,0.02667,251,1940,0.006,1.1598,50.2,0.252,strongest FLiBe estimate in this table
+O9,O,liquid_metal_comparison,6.0,0.01000,1000000,1940,0.006,1.1598,774.6,159.999,comparison only not FLiBe

@@ -1,0 +1,5 @@
+patch,nFaces,area_m2,outward_normal_x,outward_normal_y,current_Ux,current_Uy,current_speed,normal_speed_outward,outward_flux_m3_per_s,tangential_speed,angle_to_inward_normal_deg,recommended_Ux_for_2p7_normal_inlet,recommended_Uy_for_2p7_normal_inlet,classification
+inlet_aux100,7,0.0010000000000000009,1.0,0.0,0.0,-2.7,2.7,0.0,0.0,2.7,90.0,-2.7,-0.0,tangential
+inlet_ch_a,3,0.00020000000000000052,-1.0,0.0,2.7,0.0,2.7,-2.7,-0.0005400000000000014,0.0,0.0,2.7,-0.0,inflow
+inlet_ch_b,3,0.00022360679774997955,-0.4472135954999618,-0.894427190999914,2.7,0.0,2.7,-1.2074767078498971,-0.0002700000000000031,2.4149534156997676,63.43494882292177,1.207476707849897,2.414953415699768,inflow
+inlet_main40,4,0.0004000000000000006,0.0,-1.0,2.7,0.0,2.7,0.0,0.0,2.7,90.0,-0.0,2.7,tangential

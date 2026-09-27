@@ -1,0 +1,9 @@
+case_id,label,role,fluid_fraction,solid_fraction,total_power_W,fluid_power_W,solid_power_W,interface_mean_dT_K,heated_base_mean_dT_K,max_region_dT_K,fluid_min_T_K,fluid_max_T_K,solid_min_T_K,solid_max_T_K,solid_h_final_residual
+c2_boundary_flux_xfine,C2 boundary flux,boundary-flux reference,,,,,,18.90269,32.06737,38.05336,799.99982,826.66481,804.02566,838.05336,9.029684e-07
+c3_all_fluid,C3 all-fluid volumetric,all-fluid reference,,,427.0320391,,,0.04859,0.05138,0.22604,797.86704,800.22604,798.23858,800.21788,0.0013348169
+c3_mapped_all_fluid,C3 OpenMC-mapped all-fluid,mapped all-fluid reference,,,427.0320391,,,0.04861,0.05140,0.22632,797.86688,800.22632,798.23841,800.21813,0.0013344725
+c3_split_fw_breeding_norm,C3 material split FW/breeding normalized,primary material-split comparison,0.6111111111,0.3888888889,427.0320391,260.9640239,166.0680152,7.37962,9.92096,11.67994,799.77963,809.66490,801.56996,811.67994,4.9351977e-05
+c3_openmc_ffhr_be_stack,C3 OpenMC FFHR-like Be-stack split,OpenMC-tallied Be-layer source-placement follow-on,0.5291766617,0.4708233383,427.0320391,225.9753889,201.0566502,8.92420,12.00046,14.11553,799.84268,811.65700,801.89978,814.11553,1.6061861e-05
+c3_openmc_ffhr_be_stack_depth_mapped,C3 OpenMC FFHR-like Be-stack depth mapped,OpenMC-tallied region-depth mapped follow-on,0.5291766617,0.4708233383,427.0320391,225.9753889,201.0566502,8.88728,11.96353,27.71046,799.47124,822.49585,800.42938,827.71046,2.6318092e-05
+c3_openmc_material_stack,C3 OpenMC material-stack split,OpenMC-tallied source-placement follow-on,0.4718877897,0.5281122103,427.0320391,201.5112050,225.5208340,10.00418,13.45431,15.81848,799.88525,813.04989,802.13080,815.81848,3.9306187e-05
+c3_split_55_45,C3 material split 55/45,overconservative sensitivity,0.55,0.45,427.0320391,234.8676215,192.1644176,8.53167,11.47191,13.49655,799.82720,811.15072,801.81617,813.49655,4.3613115e-05

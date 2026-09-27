@@ -1,0 +1,7 @@
+metric,rans_v22,les_v27_UMean,note
+near_wall_cell_count,24720,24720,"x=0.1-0.3 m, y<=-0.035 m"
+mean_Ux_first_negative_to_positive_x_m,0.1636640412303322,,near-wall binned mean-Ux first-crossing proxy; not wall shear or sustained reattachment
+reverse_fraction_first_below_0p25_after_reverse_x_m,0.16944444444444445,,first local bin after reverse-flow region where Ux<0 fraction drops below 0.25
+reverse_fraction_last_ge_0p25_x_m,0.29722222222222217,0.29722222222222217,last bin where Ux<0 fraction remains at or above 0.25
+heated_wall_mean_reverse_fraction,0.49298142930784533,0.9027737741550782,mean across x bins in the near-wall heated-wall band
+heated_wall_min_mean_Ux_m_s,-0.7080328588709677,-0.23400329785775864,minimum binned mean Ux in near-wall band

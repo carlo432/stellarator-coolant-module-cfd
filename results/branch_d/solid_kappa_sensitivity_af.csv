@@ -1,0 +1,10 @@
+case,kappa_W_mK,wall_thickness_m,heat_flux_100kw_drop_K,heat_flux_500kw_drop_K,source_basis,notes
+RAFM-like lower bracket,28,0.004,14.286,71.429,engineering bracket pending exact Eurofer/RAFM property source,"about +0.95 K versus current at 100 kW/m2"
+current steel-like solid,30,0.004,13.333,66.667,cht_wallres heater thermophysicalProperties,"retained CHT setup; matches AE conduction check"
+RAFM-like upper bracket,32,0.004,12.500,62.500,engineering bracket pending exact Eurofer/RAFM property source,"about -0.83 K versus current at 100 kW/m2"
+Inconel reference,22.49,0.004,17.786,88.928,Kuang ARC material table,"lower conductivity structural reference; not the current CHT material"
+tungsten bracket low,100,0.004,4.000,20.000,high-conductivity tungsten context,"plasma-facing material class; not the current CHT material"
+tungsten representative 800-1000K,120,0.004,3.333,16.667,Ferrero tungsten polynomial scale,"representative rounded value for hot tungsten"
+tungsten bracket high,170,0.004,2.353,11.765,tungsten high-conductivity context,"upper conductivity context; not a current material card"
+current steel-like half thickness,30,0.002,6.667,33.333,thickness sensitivity,"drop scales linearly with wall thickness"
+current steel-like thicker wall,30,0.006,20.000,100.000,thickness sensitivity,"drop scales linearly with wall thickness"

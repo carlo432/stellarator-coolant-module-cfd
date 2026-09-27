@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+source /usr/lib/openfoam/openfoam2512/etc/bashrc >/dev/null 2>&1 || source /usr/lib/openfoam/openfoam2506/etc/bashrc >/dev/null 2>&1
+set -euo pipefail
+cd "$(dirname "$0")"
+gmsh -3 geometry/arc_blanket_2d.geo -format msh2 -o arc_blanket_2d.msh > log.gmsh 2>&1
+gmshToFoam arc_blanket_2d.msh > log.gmshToFoam 2>&1
+changeDictionary > log.changeDictionary 2>&1
+checkMesh > log.checkMesh 2>&1

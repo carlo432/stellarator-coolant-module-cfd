@@ -1,0 +1,11 @@
+metric,value,note
+step_x_m,0.1,BFS step location
+step_height_m,0.02,BFS step height h
+near_wall_band_y_max_m,-0.015,cells y <= this value
+near_wall_cell_count,24408,sampled cells
+mean_Ux_reattachment_proxy_x_m,0.1825246933309557,first negative-to-positive crossing of binned near-wall mean Ux; not Cf
+mean_Ux_reattachment_proxy_x_over_h,4.126234666547784,(x_r - x_step) / h
+reverse_fraction_first_below_0p25_x_m,0.1925,first bin after reverse region where Ux<0 fraction drops below 0.25
+reverse_fraction_first_below_0p25_x_over_h,4.625,(x - x_step) / h
+mean_reverse_flow_fraction,0.4029314903846154,across bins
+min_binned_mean_Ux_m_s,-0.6436972145061728,near-wall band

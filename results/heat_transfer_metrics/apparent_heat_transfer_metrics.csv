@@ -1,0 +1,3 @@
+case,heat_flux_kw_m2,wall_avg_deltaT_K,outlet_avg_deltaT_K,h_app_inlet_ref_W_m2K,Nu_app_inlet_ref,h_app_outlet_ref_W_m2K,Nu_app_outlet_ref,Dittus_Boelter_Nu_reference,Pr_flibe_like,Re_reference,module_loss_coefficient_K,straight_duct_Darcy_f_diagnostic
+100 kW/m^2 v14,100.0,43.798,0.199927,2283.21,60.8856,2293.68,61.1649,105.943,14.4,10000,1.35961,0.0906409
+500 kW/m^2 v16,500.0,218.888,1.02162,2284.28,60.9141,2294.99,61.1997,105.943,14.4,10000,1.35961,0.0906409

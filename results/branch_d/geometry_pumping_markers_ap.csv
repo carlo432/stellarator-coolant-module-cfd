@@ -1,0 +1,5 @@
+geometry,case_pair,pressure_drop_Pa,pump_power_W_at_U0,pump_power_relative_to_straight,nearwall_speed_m_s,passive_peak_dT_K_same_mesh,passive_mean_dT_K,pressure_source,thermal_status
+90-deg bend,v28/v29,1770.04,1.6423,0.998,0.860,59.90,43.51,patch-average inlet pressure from v28 postProcessing,passive-scalar diagnostic; not trusted physical wall-temperature scale
+straight,v13/v14,1774.44,1.6464,1.000,0.470,63.52,43.80,patch-average inlet minus outlet pressure from v13 postProcessing,passive-scalar diagnostic; not trusted physical wall-temperature scale
+outlet-offset,v22/v23,1983.00,1.8399,1.118,0.390,77.00,44.16,documented Branch D v22 result,passive-scalar diagnostic; not trusted physical wall-temperature scale
+backward-facing step,v30/v31,,,,0.296,77.40,46.37,unresolved: patch-average pressure sign failed check,passive-scalar diagnostic; not trusted physical wall-temperature scale

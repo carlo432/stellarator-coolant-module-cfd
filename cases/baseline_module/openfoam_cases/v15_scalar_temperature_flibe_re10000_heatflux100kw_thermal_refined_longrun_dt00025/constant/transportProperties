@@ -1,0 +1,11 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+
+// FLiBe-like placeholder thermal diffusivity:
+// alpha = k/(rho cp) = 1.0/(1940*2400) = 2.1478e-7 m^2/s.
+DT              [0 2 -1 0 0 0 0] 2.1478e-7;

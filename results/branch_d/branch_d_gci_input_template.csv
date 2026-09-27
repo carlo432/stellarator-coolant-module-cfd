@@ -1,0 +1,4 @@
+case,mesh_level,cells,h,metric_name,value
+example_case,fine,1000000,,example_metric,10.0
+example_case,medium,300000,,example_metric,12.0
+example_case,coarse,100000,,example_metric,15.0

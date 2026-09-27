@@ -1,0 +1,7 @@
+case_id,roadmap_item,property_set,temperature_k,rho_kg_m3,mu_pa_s,cp_j_kg_k,k_w_m_k,operating_mode,inlet_velocity_m_s,target_re,estimated_actual_re,estimated_prandtl,wall_avg_dT_K,wall_peak_dT_K_diagnostic,mass_weighted_outlet_dT_K,pressure_drop_pa,nu_mean,stanton_mean,status
+N0,N,current_baseline_ARC_table,950,1940,0.00600,2400,1.00,current,1.1598,10000,10000,14.4,,,,,,,baseline already available in existing Branch D outputs
+N1,N,Attarian_MTP,800,2066,0.01009,2245,1.29,same_inlet_speed,1.1598,,6333,17.6,,,,,,,not run
+N2,N,Attarian_MTP,900,2020.6,0.00627,2245,1.27,same_inlet_speed,1.1598,,9967,11.1,,,,,,,not run
+N3,N,Attarian_MTP,1000,1975.5,0.00395,2245,1.32,same_inlet_speed,1.1598,,15468,6.7,,,,,,,not run
+N4,N,Attarian_MTP,800,2066,0.01009,2245,1.29,same_re,1.831,10000,10000,17.6,,,,,,,not run
+N5,N,Attarian_MTP,1000,1975.5,0.00395,2245,1.32,same_re,0.750,10000,10000,6.7,,,,,,,not run

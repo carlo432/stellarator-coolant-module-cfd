@@ -1,0 +1,4 @@
+case,mesh_level,cells,h,metric_name,value
+outlet-offset,fine,218080,,peak_wall_dT_K,105.38
+outlet-offset,medium_v23,73128,,peak_wall_dT_K,77.00
+outlet-offset,coarse,21248,,peak_wall_dT_K,94.43

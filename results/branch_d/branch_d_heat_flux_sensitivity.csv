@@ -1,0 +1,5 @@
+case,geometry,heat_flux_kw_m2,wall_avg_dt_K,wall_peak_dt_K,avg_gap_vs_straight_K,peak_gap_vs_straight_K,avg_ratio_vs_straight,peak_ratio_vs_straight
+v14,straight,100.0,43.8,63.52,0.0,0.0,1.0,1.0
+v16,straight,500.0,218.89,316.61,0.0,0.0,1.0,1.0
+v23,outlet_offset,100.0,44.16,77.0,0.35999999999999943,13.479999999999997,1.0082191780821919,1.2122166246851385
+v24,outlet_offset,500.0,220.83,385.16,1.9400000000000261,68.55000000000001,1.0088628991731008,1.216512428539844

@@ -1,0 +1,6 @@
+case,model,cells,time,interface_temperature_K,interface_deltaT_K,heated_base_temperature_K,base_minus_interface_K,expected_q_t_over_kappa_K,base_drop_error_K,q_in_W,predicted_bulk_deltaT_K,outlet_area_average_deltaT_K,verification_note
+cht_coarse,k-epsilon CHT,4560,4000,823.943544,23.943544,837.276895,13.333351,13.333333,0.000018,1600,0.37037,,solid drop closes; wall-function y+ buffer-layer sequence not converged
+cht_medium,k-epsilon CHT,20480,4000,843.544745,43.544745,856.878071,13.333326,13.333333,-0.000007,1600,0.37037,0.42723,solid drop closes; outlet value is area-average not mass-weighted bulk
+cht_fine,k-epsilon CHT,84864,4000,828.609800,28.609800,841.943124,13.333324,13.333333,-0.000009,1600,0.37037,,solid drop closes; wall-function y+ buffer-layer sequence not converged
+cht_wallres,kOmegaSST wall-resolved CHT,50432,2011,828.160944,28.160944,841.494288,13.333344,13.333333,0.000011,1600,0.37037,,solid drop closes; current trusted wall-temperature bridge value
+cht_wallres_fine,kOmegaSST wall-resolved CHT,97920,1471,827.212171,27.212171,840.545483,13.333312,13.333333,-0.000021,1600,0.37037,,solid drop closes; 3.4 percent from first wall-resolved mesh

@@ -1,0 +1,4 @@
+case,model,cells,first_cell_y_plus,interface_dT_K,wall_function_band,status
+cht_coarse,k-epsilon wall-function CHT,4560,16.7,23.94,below 30; buffer layer,wall-function invalid region
+cht_medium,k-epsilon wall-function CHT,20480,9.8,43.55,below 30; buffer layer,wall-function invalid region
+cht_fine,k-epsilon wall-function CHT,84864,6.2,28.61,below 30; buffer layer,wall-function invalid region

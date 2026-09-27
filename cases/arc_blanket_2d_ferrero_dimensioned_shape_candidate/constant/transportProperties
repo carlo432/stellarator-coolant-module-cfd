@@ -1,0 +1,5 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile { version 2.0; format ascii; class dictionary; object transportProperties; }
+transportModel Newtonian;
+nu [0 2 -1 0 0 0 0] 5.21991184481e-06;
+// Leffler deck: rho=2005.78 kg/m3, mu=0.01047 Pa s at 834 K, Uref=2.7 m/s, Lref=0.02 m.

@@ -1,0 +1,6 @@
+Re,U_m_s,Q_m3_s,pressure_drop_Pa,pump_power_W,pump_power_relative_to_Re10000,interface_superheat_K,solid_base_superheat_K,interface_temperature_K,solid_base_temperature_K,law_note
+5000,0.5799,0.00046392,509.58,0.2364,0.144,45.25,58.58,845.25,858.58,interface dT uses actual AN wall-resolved CHT sweep row; fit exponent -0.7047; dP as U^1.8; pump as U^2.8
+7500,0.8699,0.00069588,1057.24,0.7357,0.447,34.39,47.72,834.39,847.72,interface dT uses actual AN wall-resolved CHT sweep row; fit exponent -0.7047; dP as U^1.8; pump as U^2.8
+10000,1.1598,0.00092784,1774.44,1.6464,1.000,28.16,41.49,828.16,841.49,interface dT uses actual AN wall-resolved CHT sweep row; fit exponent -0.7047; dP as U^1.8; pump as U^2.8
+15000,1.7397,0.00139176,3681.52,5.1238,3.112,21.09,34.42,821.09,834.42,interface dT uses actual AN wall-resolved CHT sweep row; fit exponent -0.7047; dP as U^1.8; pump as U^2.8
+20000,2.3196,0.00185568,6178.97,11.4662,6.964,17.03,30.36,817.03,830.36,interface dT uses actual AN wall-resolved CHT sweep row; fit exponent -0.7047; dP as U^1.8; pump as U^2.8

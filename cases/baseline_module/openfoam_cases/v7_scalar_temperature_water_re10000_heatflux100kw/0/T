@@ -1,0 +1,41 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 300;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 300;
+    }
+
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 300;
+        value           uniform 300;
+    }
+
+    heated_wall
+    {
+        type            fixedGradient;
+        // Planning value: 100 kW/m^2 / 0.6 W/m/K = 166666.7 K/m.
+        // Sign may need flipping after visual inspection.
+        gradient        uniform 166666.7;
+        value           uniform 300;
+    }
+
+    adiabatic_walls
+    {
+        type            zeroGradient;
+    }
+}

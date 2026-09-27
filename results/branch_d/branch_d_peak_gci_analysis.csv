@@ -1,0 +1,14 @@
+quantity,value
+case,outlet-offset
+metric_name,peak_wall_dT_K
+finest_mesh_level,fine
+medium_mesh_level,medium_v23
+coarsest_mesh_level,coarse
+finest_value,105.38
+medium_value,77
+coarse_value,94.43
+r21,1.439386353
+r32,1.509808546
+status,non_monotonic
+formal_gci_valid,false
+reason,Three-grid sequence is non-monotonic; do not compute formal GCI.

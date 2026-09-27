@@ -1,0 +1,4 @@
+geometry,source_case,inlet_U_m_s,near_wall_flushing_speed_m_s,CHT_interface_min_dT_K,CHT_interface_mean_dT_K,CHT_interface_peak_dT_K,hotspot_location,pressure_drop_Pa,status,notes
+straight,cht_wallres P4 parser,1.1598,0.47,4.68,28.16,34.41,downstream outlet / developed thermal boundary layer,1774,complete P4,"wall-resolved straight-channel CHT bridge; official P4 min/mean/peak extracted with same parser as geometry cases"
+BFS,cht_bfs P4 parser,1.1598,0.296,14.77,31.45,45.71,"recirculation bubble about 1 step-height behind step; x~0.111 m",,complete P4,"wall-resolved kOmegaSST CHT; heated-interface y+ max 0.51; base-interface drop 13.333 K; worst peak because slow fluid is trapped directly over heated floor"
+outlet-offset,cht_offset P4 parser,1.1598,0.39,4.38,26.40,32.77,blocked-outlet corner dead-zone,1983,complete P4,"official final offset interface dT min/mean/peak; pressure drop is passive/RANS reference, not a separately extracted CHT pressure drop"

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified coolant-module cutaway schematic</title>
+  <desc id="desc">Labeled schematic showing inlet, expansion chamber, heated wall, recirculation zone, hotspot region, and outlet.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2933"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f77b4"/>
+    </marker>
+    <linearGradient id="hotwall" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="0.55" stop-color="#ef4444"/>
+      <stop offset="1" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="760" fill="#ffffff"/>
+  <text x="700" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">
+    Simplified Stellarator-Relevant Cooling Module: Labeled Cutaway
+  </text>
+  <text x="700" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#374151">
+    Idealized module, not reactor CAD. Heated-wall hotspot is a same-mesh diagnostic.
+  </text>
+
+  <!-- main top-view cutaway body -->
+  <path d="M 95 330 L 340 330 L 340 220 L 980 220 L 980 330 L 1285 330 L 1285 455 L 980 455 L 980 565 L 340 565 L 340 455 L 95 455 Z"
+        fill="#dbeafe" stroke="#1f2937" stroke-width="5" opacity="0.82"/>
+
+  <!-- transparent chamber overlay -->
+  <rect x="340" y="220" width="640" height="345" fill="#bfdbfe" stroke="#1f2937" stroke-width="3" opacity="0.45"/>
+
+  <!-- heated wall -->
+  <rect x="360" y="530" width="600" height="35" fill="url(#hotwall)" stroke="#7c2d12" stroke-width="3"/>
+  <text x="660" y="613" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#7c2d12">
+    heated wall / plasma-facing analogue
+  </text>
+
+  <!-- inlet/outlet arrows -->
+  <line x1="35" y1="392" x2="285" y2="392" stroke="#1f77b4" stroke-width="18" marker-end="url(#arrowBlue)"/>
+  <line x1="1065" y1="392" x2="1365" y2="392" stroke="#1f77b4" stroke-width="18" marker-end="url(#arrowBlue)"/>
+  <text x="155" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#0f172a">inlet</text>
+  <text x="1180" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#0f172a">outlet</text>
+
+  <!-- recirculation loops -->
+  <path d="M 470 345 C 560 255, 720 270, 760 360 C 805 462, 650 505, 535 468"
+        fill="none" stroke="#0f766e" stroke-width="12" opacity="0.88" marker-end="url(#arrow)"/>
+  <path d="M 500 450 C 570 520, 730 500, 770 425 C 820 330, 665 305, 555 350"
+        fill="none" stroke="#0f766e" stroke-width="8" opacity="0.55" marker-end="url(#arrow)"/>
+  <text x="625" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#065f46">
+    recirculation / slow near-wall flushing
+  </text>
+  <line x1="625" y1="213" x2="625" y2="315" stroke="#065f46" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- hotspot mark -->
+  <ellipse cx="850" cy="547" rx="92" ry="27" fill="#fde68a" stroke="#b45309" stroke-width="4" opacity="0.9"/>
+  <text x="1005" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#92400e">
+    hotspot-prone zone
+  </text>
+  <line x1="1000" y1="618" x2="885" y2="552" stroke="#92400e" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- dimension labels -->
+  <text x="660" y="690" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#374151">
+    current module scale: 0.40 m streamwise length, 0.04 m depth, inlet hydraulic diameter 0.02667 m
+  </text>
+  <text x="660" y="720" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#6b7280">
+    Use with Branch D caveat: trend is illustrative (n = 4); peak wall dT is mesh-sensitive.
+  </text>
+
+  <!-- section labels -->
+  <text x="660" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1f2937" opacity="0.82">
+    expanded chamber
+  </text>
+  <text x="210" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#1f2937">narrow channel</text>
+  <text x="1140" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#1f2937">narrow channel</text>
+</svg>
+

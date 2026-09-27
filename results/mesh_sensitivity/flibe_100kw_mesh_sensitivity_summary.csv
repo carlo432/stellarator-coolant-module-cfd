@@ -1,0 +1,4 @@
+case,cells,heated_wall_faces,pressure_drop_pa,outlet_avg_t,heated_wall_avg_t,max_t,wall_surface_avg_dt,wall_surface_max_dt
+v9 coarse,3792,160,1860.0,800.123,1084.43,1119.34,284.43,319.34
+v12 refined,28976,1280,1858.0,800.195,869.171,893.437,69.17,93.44
+v14 thermal refined,73344,3216,1774.0,800.2,843.798,863.519,43.8,63.52

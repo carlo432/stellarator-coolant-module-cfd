@@ -1,0 +1,5 @@
+geometry,case,nearwall_mean_speed_m_s,peak_wall_deltaT_K,pearson_r_all_four,note
+90-deg bend,v28/v29,0.86,59.9,-0.847743228567437,"weak/local separation, reattaches; no hotspot amplification"
+straight,v13/v14,0.47,63.52,-0.847743228567437,baseline streamwise development
+outlet-offset,v22/v23,0.39,77.0,-0.847743228567437,broad slow near-wall recirculation; hotspot-prone
+backward-facing step,v30/v31,0.296,77.4,-0.847743228567437,forward-predicted slow near-wall flow; hot peak confirmed

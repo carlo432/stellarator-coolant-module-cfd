@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.msh
+*.stl
+processor*/
+postProcessing/
+log.*

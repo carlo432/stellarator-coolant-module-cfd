@@ -1,0 +1,12 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+
+transportModel  Newtonian;
+
+// Water debug case near 300 K.
+nu              [0 2 -1 0 0 0 0] 8.9278e-7;

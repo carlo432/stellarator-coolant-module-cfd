@@ -1,0 +1,13 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+
+transportModel  Newtonian;
+
+// Constant-property FLiBe-like fluid: rho = 1940 kg/m^3, mu = 0.006 Pa s.
+// nu = mu/rho.
+nu              [0 2 -1 0 0 0 0] 3.09278e-6;

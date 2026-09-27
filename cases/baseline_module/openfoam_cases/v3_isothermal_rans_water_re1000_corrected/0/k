@@ -1,0 +1,40 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      k;
+}
+
+dimensions      [0 2 -2 0 0 0 0];
+
+// 5% turbulence intensity estimate for U = 0.0335 m/s.
+internalField   uniform 4.2e-6;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 4.2e-6;
+    }
+
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 4.2e-6;
+        value           uniform 4.2e-6;
+    }
+
+    heated_wall
+    {
+        type            kqRWallFunction;
+        value           uniform 4.2e-6;
+    }
+
+    adiabatic_walls
+    {
+        type            kqRWallFunction;
+        value           uniform 4.2e-6;
+    }
+}

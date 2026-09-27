@@ -1,0 +1,44 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile { version 2.0; format ascii; class dictionary; object blockMeshDict; }
+
+// HPC-1 capstone channel mesh (canonical item S / C4 preflight).
+// Periodic plane channel, half-height delta = 0.01 m, domain 2*pi*d x 2*d x pi*d.
+// 128 x 96 x 96 = 1,179,648 hexahedra; symmetric wall-normal grading, expansion 16
+// per half.  checkMesh: Mesh OK, max aspect ratio 12.902557, non-orthogonality 0.
+// Same lineage as les_channel_o (64^3, grading 12) and gen_les_channel_c1_thermal.py.
+// Regenerated from the documented HPC-1 readiness spec and re-verified against
+// cell count + aspect ratio.
+
+scale 1;
+
+vertices
+(
+    (0                0     0)
+    (0.0628318530718  0     0)
+    (0.0628318530718  0.02  0)
+    (0                0.02  0)
+    (0                0     0.0314159265359)
+    (0.0628318530718  0     0.0314159265359)
+    (0.0628318530718  0.02  0.0314159265359)
+    (0                0.02  0.0314159265359)
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (128 96 96)
+    simpleGrading (1 ( (0.5 0.5 16) (0.5 0.5 0.0625) ) 1)
+);
+
+edges ();
+
+boundary
+(
+    bottomWall { type wall;   faces ( (0 1 5 4) ); }
+    topWall    { type wall;   faces ( (3 7 6 2) ); }
+    inlet      { type cyclic; neighbourPatch outlet; faces ( (0 4 7 3) ); }
+    outlet     { type cyclic; neighbourPatch inlet;  faces ( (1 2 6 5) ); }
+    front      { type cyclic; neighbourPatch back;   faces ( (4 5 6 7) ); }
+    back       { type cyclic; neighbourPatch front;  faces ( (0 3 2 1) ); }
+);
+
+mergePatchPairs ();

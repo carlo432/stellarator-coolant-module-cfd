@@ -1,0 +1,10 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+
+// Water thermal diffusivity near 300 K, alpha = k/(rho cp).
+DT              [0 2 -1 0 0 0 0] 1.44e-7;

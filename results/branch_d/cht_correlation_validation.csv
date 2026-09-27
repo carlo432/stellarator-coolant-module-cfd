@@ -1,0 +1,7 @@
+metric,deltaT_K,Nu,comparison,difference_vs_gnielinski_pct,interpretation
+"wall-resolved CHT, 50k",28.16,94.7,CHT result,9.5,wall-resolved CHT agrees with duct correlations
+"wall-resolved CHT, 98k",27.21,98.0,CHT result,5.8,wall-resolved CHT agrees with duct correlations
+Dittus-Boelter,25.17,105.9,textbook turbulent duct correlation,-2.1,independent film-temperature scale
+Gnielinski,25.71,103.7,textbook turbulent duct correlation,0.0,independent film-temperature scale
+"passive peak, medium",77.00,34.6,retracted passive-scalar peak metric,199.5,about 3-4x above the correlation film-temperature scale
+"passive peak, fine",105.38,25.3,retracted passive-scalar peak metric,309.8,about 3-4x above the correlation film-temperature scale
