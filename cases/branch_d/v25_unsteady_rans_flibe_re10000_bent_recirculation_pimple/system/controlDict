@@ -1,0 +1,52 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// Unsteady RANS (pimpleFoam) on the BENT recirculation geometry (Branch D envelope push).
+// Initialized from the converged v22 steady RANS field. Goal: does the enlarged
+// recirculation zone become genuinely time-dependent? Straight v17/v18 stayed near steady.
+
+application     pimpleFoam;
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         0.4;          // ~0.65 flow-through times (residence ~0.6 s)
+deltaT          1e-4;
+writeControl    runTime;
+writeInterval   0.05;         // 8 field snapshots
+purgeWrite      0;
+writeFormat     ascii;
+writePrecision  6;
+writeCompression off;
+timeFormat      general;
+timePrecision   6;
+runTimeModifiable true;
+adjustTimeStep  yes;
+maxCo           0.5;
+maxDeltaT       2.5e-4;
+
+functions
+{
+    // Time-resolved velocity in the recirculation zone over the heated wall.
+    recircProbes
+    {
+        type            probes;
+        libs            ("libsampling.so");
+        writeControl    timeStep;
+        writeInterval   5;
+        fields          (U p);
+        probeLocations
+        (
+            (0.20 -0.030 0.02)   // mid recirculation, above heated wall
+            (0.15 -0.035 0.02)   // upstream near heated wall
+            (0.26 -0.035 0.02)   // downstream near heated wall (hotspot x)
+        );
+    }
+    // Inlet/outlet pressure to watch for pressure-drop oscillation.
+    inletP  { type surfaceFieldValue; libs ("libfieldFunctionObjects.so"); regionType patch; name inlet;  operation areaAverage; fields (p); writeControl timeStep; writeInterval 5; writeFields false; }
+    outletP { type surfaceFieldValue; libs ("libfieldFunctionObjects.so"); regionType patch; name outlet; operation areaAverage; fields (p); writeControl timeStep; writeInterval 5; writeFields false; }
+}

@@ -1,0 +1,19 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile { version 2.0; format ascii; class volVectorField; object U; }
+dimensions [0 1 -1 0 0 0 0];
+internalField uniform (1.99 0 0);
+boundaryField
+{
+    inlet
+    {
+        type            turbulentDFSEMInlet;
+        delta           0.0099919;
+        nCellPerEddy    5;
+        U               { type mappedFile; }
+        R               { type mappedFile; }
+        L               { type mappedFile; }
+        value           uniform (0.86 0 0);
+    }
+    outlet { type pressureInletOutletVelocity; value uniform (0 0 0); }
+    "(heated_first_wall|blanket_back_wall|side_walls)" { type noSlip; }
+}

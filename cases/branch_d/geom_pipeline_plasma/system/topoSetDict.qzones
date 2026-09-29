@@ -1,0 +1,22 @@
+FoamFile { version 2.0; format ascii; class dictionary; object topoSetDict; }
+actions
+(
+    { name qzone0c; type cellSet; action new; source cylinderAnnulusToCell;
+      p1 (0 -1 0.18); p2 (0 1 0.18); innerRadius 0.16; outerRadius 0.17; }
+    { name qzone0; type cellZoneSet; action new; source setToCellZone; set qzone0c; }
+    { name qzone1c; type cellSet; action new; source cylinderAnnulusToCell;
+      p1 (0 -1 0.18); p2 (0 1 0.18); innerRadius 0.17; outerRadius 0.175; }
+    { name qzone1; type cellZoneSet; action new; source setToCellZone; set qzone1c; }
+    { name qzone2c; type cellSet; action new; source cylinderAnnulusToCell;
+      p1 (0 -1 0.18); p2 (0 1 0.18); innerRadius 0.175; outerRadius 0.18; }
+    { name qzone2; type cellZoneSet; action new; source setToCellZone; set qzone2c; }
+    { name qzone3c; type cellSet; action new; source cylinderAnnulusToCell;
+      p1 (0 -1 0.18); p2 (0 1 0.18); innerRadius 0.18; outerRadius 0.185; }
+    { name qzone3; type cellZoneSet; action new; source setToCellZone; set qzone3c; }
+    { name qzone4c; type cellSet; action new; source cylinderAnnulusToCell;
+      p1 (0 -1 0.18); p2 (0 1 0.18); innerRadius 0.185; outerRadius 0.19; }
+    { name qzone4; type cellZoneSet; action new; source setToCellZone; set qzone4c; }
+    { name qzone5c; type cellSet; action new; source cylinderAnnulusToCell;
+      p1 (0 -1 0.18); p2 (0 1 0.18); innerRadius 0.19; outerRadius 0.2; }
+    { name qzone5; type cellZoneSet; action new; source setToCellZone; set qzone5c; }
+);

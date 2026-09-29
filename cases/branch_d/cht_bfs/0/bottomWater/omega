@@ -1,0 +1,7 @@
+FoamFile { version 2.0; format ascii; class volScalarField; object omega; }
+dimensions [0 0 -1 0 0 0 0]; internalField uniform 69.3;
+boundaryField {
+ inlet { type fixedValue; value uniform 69.3; }
+ outlet { type inletOutlet; inletValue uniform 69.3; value uniform 69.3; }
+ "(topWall|inletFloor|stepWall|fluidSides|bottomWater_to_heater)" { type omegaWallFunction; value uniform 69.3; }
+}

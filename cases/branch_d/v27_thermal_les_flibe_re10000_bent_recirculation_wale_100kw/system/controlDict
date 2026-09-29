@@ -1,0 +1,73 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// Thermal LES on the bent geometry: WALE flow (continued from v26 developed field)
+// with a CO-SOLVED passive scalar T (100 kW/m^2 heated wall). Question: does the LES
+// recirculation unsteadiness drive WALL-TEMPERATURE fluctuations (thermal fatigue)?
+// Also collects UMean/TMean for the RANS-vs-LES mean-field comparison.
+
+application     pimpleFoam;
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         0.5;
+deltaT          1e-4;
+writeControl    runTime;
+writeInterval   0.1;
+purgeWrite      0;
+writeFormat     ascii;
+writePrecision  6;
+writeCompression off;
+timeFormat      general;
+timePrecision   6;
+runTimeModifiable true;
+adjustTimeStep  yes;
+maxCo           0.5;
+maxDeltaT       2.5e-4;
+
+functions
+{
+    // Co-solved passive temperature on the unsteady LES flow.
+    Ttransport
+    {
+        type            scalarTransport;
+        libs            ("libsolverFunctionObjects.so");
+        field           T;
+        D               2.1478e-7;     // FLiBe-like thermal diffusivity
+        nCorr           1;
+        resetOnStartUp  false;
+    }
+    // Time-averaged fields for the RANS-vs-LES mean comparison.
+    averages
+    {
+        type            fieldAverage;
+        libs            ("libfieldFunctionObjects.so");
+        timeStart       0.15;          // start after T has begun to develop
+        writeControl    writeTime;
+        fields
+        (
+            U { mean on; prime2Mean on; base time; }
+            T { mean on; prime2Mean on; base time; }
+        );
+    }
+    // Near-wall temperature + velocity probes (1 mm above heated wall y=-0.04).
+    wallProbes
+    {
+        type            probes;
+        libs            ("libsampling.so");
+        writeControl    timeStep;
+        writeInterval   5;
+        fields          (T U);
+        probeLocations
+        (
+            (0.26 -0.039 0.02)   // downstream = v23/LES hotspot x
+            (0.20 -0.039 0.02)   // mid heated wall
+            (0.15 -0.039 0.02)   // upstream heated wall
+        );
+    }
+}

@@ -1,0 +1,22 @@
+FoamFile { version 2.0; format ascii; class dictionary; object topoSetDict; }
+actions
+(
+    { name qzone0c; type cellSet; action new; source boxToCell;
+      box (-0.01 -0.01 0.01) (0.308451 0.01 0.016); }
+    { name qzone0; type cellZoneSet; action new; source setToCellZone; set qzone0c; }
+    { name qzone1c; type cellSet; action new; source boxToCell;
+      box (-0.01 -0.01 0.005) (0.308451 0.01 0.01); }
+    { name qzone1; type cellZoneSet; action new; source setToCellZone; set qzone1c; }
+    { name qzone2c; type cellSet; action new; source boxToCell;
+      box (-0.01 -0.01 0) (0.308451 0.01 0.005); }
+    { name qzone2; type cellZoneSet; action new; source setToCellZone; set qzone2c; }
+    { name qzone3c; type cellSet; action new; source boxToCell;
+      box (-0.01 -0.01 -0.005) (0.308451 0.01 0); }
+    { name qzone3; type cellZoneSet; action new; source setToCellZone; set qzone3c; }
+    { name qzone4c; type cellSet; action new; source boxToCell;
+      box (-0.01 -0.01 -0.01) (0.308451 0.01 -0.005); }
+    { name qzone4; type cellZoneSet; action new; source setToCellZone; set qzone4c; }
+    { name qzone5c; type cellSet; action new; source boxToCell;
+      box (-0.01 -0.01 -0.016) (0.308451 0.01 -0.01); }
+    { name qzone5; type cellZoneSet; action new; source setToCellZone; set qzone5c; }
+);

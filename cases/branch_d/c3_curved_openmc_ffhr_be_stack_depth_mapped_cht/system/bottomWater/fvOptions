@@ -1,0 +1,351 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2512/v2506                           |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system/bottomWater";
+    object      fvOptions;
+}
+
+c3FFHRFluidMappedHeating_00
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_00;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 10.0187524174 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_01
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_01;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0805892736 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_02
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_02;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 1.17729434121 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_03
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_03;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 0 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_04
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_04;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 0 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_05
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_05;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 0 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_06
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_06;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 0 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_07
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_07;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 0 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_08
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_08;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 0 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_09
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_09;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 0 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_10
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_10;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 0 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_11
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_11;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 3.9225096936e-16 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_12
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_12;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0946063889 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_13
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_13;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0801459326 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_14
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_14;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0808138377 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_15
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_15;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0363606981 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_16
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_16;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0599433812 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_17
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_17;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0284850265 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_18
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_18;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0079548239 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_19
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_19;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0743993239 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_20
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_20;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.1286412261 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_21
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_21;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.041077394 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_22
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_22;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 17.0860933626 0 );
+    }
+}
+
+c3FFHRFluidMappedHeating_23
+{
+    type            scalarSemiImplicitSource;
+    active          true;
+    selectionMode   cellZone;
+    cellZone        c3FFHRFluidSource_23;
+    volumeMode      absolute;
+
+    sources
+    {
+        h           ( 9.98023142843 0 );
+    }
+}

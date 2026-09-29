@@ -1,0 +1,7 @@
+FoamFile { version 2.0; format ascii; class volScalarField; object epsilon; }
+dimensions [0 2 -3 0 0 0 0]; internalField uniform 0.0315;
+boundaryField {
+ inlet { type fixedValue; value uniform 0.0315; }
+ outlet { type inletOutlet; inletValue uniform 0.0315; value uniform 0.0315; }
+ "(fluidTop|fluidSides|bottomWater_to_heater)" { type epsilonWallFunction; value uniform 0.0315; }
+}

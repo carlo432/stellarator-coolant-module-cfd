@@ -1,0 +1,14 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile { version 2.0; format ascii; class volVectorField; object U; }
+dimensions [0 1 -1 0 0 0 0];
+internalField uniform (0 0 0);
+boundaryField
+{
+    inlet_aux100 { type fixedValue; value uniform (-0 -0.313 0); }
+    inlet_ch_a   { type fixedValue; value uniform (0.87542450743 1.77595943979 0); }
+    inlet_main40 { type fixedValue; value uniform (1.62728556457 1.12798124601 0); }
+    inlet_ch_b   { type fixedValue; value uniform (1.89429846262 -0.576223337352 0); }
+    outlet180    { type pressureInletOutletVelocity; value uniform (0 0 0); }
+    walls        { type noSlip; }
+    frontAndBack { type empty; }
+}

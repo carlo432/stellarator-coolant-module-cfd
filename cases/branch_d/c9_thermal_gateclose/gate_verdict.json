@@ -1,0 +1,188 @@
+{
+  "case": "cases/branch_d/c9_thermal_gateclose",
+  "contract": "cases/branch_d/c9_thermal_gateclose/constant/sourceDrivenScalarGate.json",
+  "status": "FAIL",
+  "statistics_allowed": false,
+  "scalars": [
+    {
+      "field": "H",
+      "latest_time": 5.599883532918228,
+      "balance_field": "HMean",
+      "balance_time": 5.599883532918228,
+      "source_mean_per_s": 5.567004,
+      "expected_mean_wall_flux": 0.05567004,
+      "measured_mean_wall_flux": 0.04983407568168778,
+      "measured_mean_wall_flux_instantaneous": 0.050612543493921316,
+      "balance_relative_error": 0.10483132971185607,
+      "balance_fraction_of_target": 0.895168670288144,
+      "flatness_history": [
+        {
+          "time": 5.199970381670128,
+          "cell_mean": 35.17239997716191,
+          "volume_weighted_mean": 44.16296849555589
+        },
+        {
+          "time": 5.299984905170862,
+          "cell_mean": 35.25652352925887,
+          "volume_weighted_mean": 44.22456201548691
+        },
+        {
+          "time": 5.3998613741239625,
+          "cell_mean": 35.26651726960525,
+          "volume_weighted_mean": 44.28385264811686
+        },
+        {
+          "time": 5.499986351668028,
+          "cell_mean": 35.30884762574573,
+          "volume_weighted_mean": 44.34165069000166
+        },
+        {
+          "time": 5.599883532918228,
+          "cell_mean": 35.33956823197508,
+          "volume_weighted_mean": 44.396224329564724
+        }
+      ],
+      "flatness_mean_type": "volume",
+      "flatness_relative_range": 0.005267526659173123,
+      "flatness_relative_range_arithmetic": 0.004739837780693603,
+      "minimum_flatness_snapshots": 3,
+      "balance_tolerance_fraction": 0.05,
+      "flatness_tolerance_fraction": 0.01,
+      "wall_flux_detail": {
+        "lower_gradient": 81852.7263102123,
+        "upper_gradient": -79277.63434165358,
+        "lower_flux": 0.05063049497553968,
+        "upper_flux": 0.04903765638783588,
+        "mean_wall_flux": 0.04983407568168778
+      },
+      "instantaneous_wall_flux_detail": {
+        "lower_gradient": 83057.52107624136,
+        "upper_gradient": -80589.88835450159,
+        "lower_flux": 0.051375728006835555,
+        "upper_flux": 0.049849358981007084,
+        "mean_wall_flux": 0.050612543493921316
+      },
+      "passed": false
+    },
+    {
+      "field": "H1",
+      "latest_time": 5.599883532918228,
+      "balance_field": "H1Mean",
+      "balance_time": 5.599883532918228,
+      "source_mean_per_s": 5.567004,
+      "expected_mean_wall_flux": 0.05567004,
+      "measured_mean_wall_flux": 0.0524850286707209,
+      "measured_mean_wall_flux_instantaneous": 0.05267194459167137,
+      "balance_relative_error": 0.057212305385070654,
+      "balance_fraction_of_target": 0.9427876946149294,
+      "flatness_history": [
+        {
+          "time": 5.199970381670128,
+          "cell_mean": 12.439090452772923,
+          "volume_weighted_mean": 17.502592961585837
+        },
+        {
+          "time": 5.299984905170862,
+          "cell_mean": 12.476750675926729,
+          "volume_weighted_mean": 17.53718780486545
+        },
+        {
+          "time": 5.3998613741239625,
+          "cell_mean": 12.493570252779392,
+          "volume_weighted_mean": 17.572334431767832
+        },
+        {
+          "time": 5.499986351668028,
+          "cell_mean": 12.511489414034799,
+          "volume_weighted_mean": 17.60306268741431
+        },
+        {
+          "time": 5.599883532918228,
+          "cell_mean": 12.534280098823183,
+          "volume_weighted_mean": 17.62986653456414
+        }
+      ],
+      "flatness_mean_type": "volume",
+      "flatness_relative_range": 0.007244209039812415,
+      "flatness_relative_range_arithmetic": 0.0076206364858108205,
+      "minimum_flatness_snapshots": 3,
+      "balance_tolerance_fraction": 0.05,
+      "flatness_tolerance_fraction": 0.01,
+      "wall_flux_detail": {
+        "lower_gradient": 17399.629697794135,
+        "upper_gradient": -16540.727308343317,
+        "lower_flux": 0.05381322673674375,
+        "upper_flux": 0.05115683060469805,
+        "mean_wall_flux": 0.0524850286707209
+      },
+      "instantaneous_wall_flux_detail": {
+        "lower_gradient": 17330.451338965617,
+        "upper_gradient": -16730.778099708565,
+        "lower_flux": 0.05359927329212608,
+        "upper_flux": 0.05174461589121666,
+        "mean_wall_flux": 0.05267194459167137
+      },
+      "passed": false
+    },
+    {
+      "field": "H2",
+      "latest_time": 5.599883532918228,
+      "balance_field": "H2Mean",
+      "balance_time": 5.599883532918228,
+      "source_mean_per_s": 5.567004,
+      "expected_mean_wall_flux": 0.05567004,
+      "measured_mean_wall_flux": 0.05110371969478075,
+      "measured_mean_wall_flux_instantaneous": 0.05153832204920426,
+      "balance_relative_error": 0.0820247354810459,
+      "balance_fraction_of_target": 0.9179752645189541,
+      "flatness_history": [
+        {
+          "time": 5.199970381670128,
+          "cell_mean": 19.32168878301487,
+          "volume_weighted_mean": 25.781620501412064
+        },
+        {
+          "time": 5.299984905170862,
+          "cell_mean": 19.37987732233949,
+          "volume_weighted_mean": 25.82973049024725
+        },
+        {
+          "time": 5.3998613741239625,
+          "cell_mean": 19.395951506658673,
+          "volume_weighted_mean": 25.877975384385238
+        },
+        {
+          "time": 5.499986351668028,
+          "cell_mean": 19.43128027668602,
+          "volume_weighted_mean": 25.923146640974156
+        },
+        {
+          "time": 5.599883532918228,
+          "cell_mean": 19.455789616935867,
+          "volume_weighted_mean": 25.964123790238986
+        }
+      ],
+      "flatness_mean_type": "volume",
+      "flatness_relative_range": 0.00705318014736511,
+      "flatness_relative_range_arithmetic": 0.0069135126193739255,
+      "minimum_flatness_snapshots": 3,
+      "balance_tolerance_fraction": 0.05,
+      "flatness_tolerance_fraction": 0.01,
+      "wall_flux_detail": {
+        "lower_gradient": 33781.15102717378,
+        "upper_gradient": -32313.06801819091,
+        "lower_flux": 0.052238834136911265,
+        "upper_flux": 0.04996860525265024,
+        "mean_wall_flux": 0.05110371969478075
+      },
+      "instantaneous_wall_flux_detail": {
+        "lower_gradient": 33876.88966625862,
+        "upper_gradient": -32779.415727858344,
+        "lower_flux": 0.05238688341100567,
+        "upper_flux": 0.050689760687402864,
+        "mean_wall_flux": 0.05153832204920426
+      },
+      "passed": false
+    }
+  ]
+}

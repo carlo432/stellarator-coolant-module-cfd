@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2512                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FoamFile
+{
+    version         2;
+    format          ascii;
+    class           dictionary;
+    object          controlDict;
+}
+
+application     chtMultiRegionSimpleFoam;
+
+startFrom       latestTime;
+
+startTime       0.001;
+
+stopAt          endTime;
+
+endTime         4000;
+
+deltaT          1;
+
+writeControl    adjustable;
+
+writeInterval   4000;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+maxCo           0.6;
+
+maxDi           10;
+
+adjustTimeStep  yes;
+
+functions
+{
+    vtkWrite
+    {
+        type            vtkWrite;
+        libs            ( utilityFunctionObjects );
+        log             true;
+        writeControl    writeTime;
+        writeInterval   1;
+        regions         ( ".*" );
+        internal        true;
+        boundary        true;
+        single          false;
+        interpolate     true;
+        fields          ( ".*" );
+        writeIds        false;
+    }
+    walls
+    {
+        type            vtkWrite;
+        libs            ( utilityFunctionObjects );
+        log             true;
+        writeControl    writeTime;
+        writeInterval   1;
+        internal        false;
+        regions         ( heater "(?i).*solid" );
+        patches         ( "(?i).*solid_to.*" "heater.*(Air|Water)" );
+        fields          ( T );
+    }
+}
+
+
+// ************************************************************************* //

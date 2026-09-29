@@ -1,0 +1,54 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fieldAverages;
+}
+
+functions
+{
+    inletPressure
+    {
+        type        surfaceFieldValue;
+        libs        (fieldFunctionObjects);
+        regionType  patch;
+        name        inlet;
+        operation   areaAverage;
+        writeFields false;
+        fields      (p);
+    }
+
+    outletPressure
+    {
+        type        surfaceFieldValue;
+        libs        (fieldFunctionObjects);
+        regionType  patch;
+        name        outlet;
+        operation   areaAverage;
+        writeFields false;
+        fields      (p);
+    }
+
+    inletFlowRate
+    {
+        type        surfaceFieldValue;
+        libs        (fieldFunctionObjects);
+        regionType  patch;
+        name        inlet;
+        operation   sum;
+        writeFields false;
+        fields      (phi);
+    }
+
+    outletFlowRate
+    {
+        type        surfaceFieldValue;
+        libs        (fieldFunctionObjects);
+        regionType  patch;
+        name        outlet;
+        operation   sum;
+        writeFields false;
+        fields      (phi);
+    }
+}

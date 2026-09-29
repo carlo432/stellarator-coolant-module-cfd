@@ -1,0 +1,23 @@
+{
+  "case": "cases/branch_d/c3_curved_material_split_55_45_cht",
+  "basis": "C2 curved CHT geometry with external base flux disabled",
+  "target_id": "c3_ms_total_blanket_55_45",
+  "target_csv": "/root/revengence/results/c3_material_split_targets.csv",
+  "literature_basis": "Yamanishi 1998 reports 55% of total nuclear heating deposited in FLiBe; non-FLiBe heating is lumped into the local solid",
+  "solver_use": "overconservative sensitivity; not primary because it dumps the omitted 10% shield/deep-region power into the local solid",
+  "target_heat_flux_W_m2": 100000.0,
+  "heated_base_area_m2": 0.004270320390687767,
+  "total_power_W": 427.0320390687767,
+  "target_card_total_reference_power_W": 427.032,
+  "fluid_fraction": 0.55,
+  "solid_fraction": 0.45,
+  "fluid_power_W": 234.86762148782722,
+  "solid_power_W": 192.16441758094953,
+  "target_card_fluid_power_W": 234.8676,
+  "target_card_solid_power_W": 192.1644,
+  "source_method": "scalarSemiImplicitSource on h in bottomWater and heater regions; volumeMode absolute",
+  "radial_cells": 50,
+  "solid_cells": 8,
+  "end_time": 400,
+  "write_interval": 400
+}

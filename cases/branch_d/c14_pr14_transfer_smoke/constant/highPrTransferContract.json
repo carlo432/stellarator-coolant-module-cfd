@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "registered_before_data": true,
+  "scope": "straight_periodic_channel_high_pr_transfer",
+  "prandtl_number": 14.4,
+  "benchmark_parent": "qualified C9 Pr=5 channel-method certification",
+  "smoke_interpretation": "machinery_only",
+  "smoke_expected_physical_gate_status": "FAIL_OR_NOT_READY",
+  "smoke_acceptance": {
+    "mesh_and_solver_complete": true,
+    "alphaD": 0.06944444444444445,
+    "alphaDt": 1.1111111111111112,
+    "required_fields": [
+      "H",
+      "HMean",
+      "HPrime2Mean",
+      "U",
+      "UMean",
+      "UPrime2Mean",
+      "yPlus",
+      "Cy",
+      "V"
+    ],
+    "all_required_fields_finite": true
+  },
+  "production_requirements": {
+    "first_cell_thermal_resolution": "demonstrate yPlus_1*Pr^(1/3) or an equivalent theta+ conductive-sublayer check; do not inherit Pr=5 grading",
+    "relative_sublayer_thinning_vs_pr5": 1.422757321796025,
+    "default_initialization": "Kader-profile seeded near equilibrium",
+    "equilibration_budget_unseeded_s": [
+      25.0,
+      30.0
+    ],
+    "physical_gate": {
+      "balance_tolerance_fraction": 0.05,
+      "flatness_tolerance_fraction": 0.01,
+      "balance_mode": "fieldAverage totalTime accumulator difference",
+      "flatness_mean": "volume",
+      "stale_endpoint_invariant": true,
+      "two_wall_reporting": true,
+      "independent_window_stability": true
+    }
+  },
+  "claim_limits": {
+    "kawamura_p1_p4_certification_allowed": false,
+    "pr14_status": "transfer/readiness only without a registered matching reference",
+    "stellarator_geometry_validation": false
+  }
+}

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+source /usr/lib/openfoam/openfoam2512/etc/bashrc >/dev/null 2>&1 || source /usr/lib/openfoam/openfoam2506/etc/bashrc >/dev/null 2>&1
+set -euo pipefail
+cd "$(dirname "$0")"
+: "${MPI_NP:?Set MPI_NP to match system/decomposeParDict numberOfSubdomains}"
+mpirun -np "$MPI_NP" pimpleFoam -parallel > log.pimpleFoam 2>&1
+reconstructPar -latestTime > log.reconstructPar 2>&1
+postProcess -func writeCellCentres -latestTime > log.cc 2>&1 || true

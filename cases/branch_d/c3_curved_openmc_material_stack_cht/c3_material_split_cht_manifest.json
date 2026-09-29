@@ -1,0 +1,23 @@
+{
+  "case": "cases/branch_d/c3_curved_openmc_material_stack_cht",
+  "basis": "C2 curved CHT geometry with external base flux disabled",
+  "target_id": "c3_ms_openmc_material_stack",
+  "target_csv": "/root/revengence/results/c3_material_split_targets.csv",
+  "literature_basis": "OpenMC 5mm steel-proxy plus 20mm FLiBe plus 5mm steel-proxy CSG stack tallied with heating-local",
+  "solver_use": "OpenMC-tallied material-stack follow-on; source-placement sensitivity not reactor neutronics",
+  "target_heat_flux_W_m2": 100000.0,
+  "heated_base_area_m2": 0.004270320390687767,
+  "total_power_W": 427.0320390687767,
+  "target_card_total_reference_power_W": 427.0320391,
+  "fluid_fraction": 0.4718877897,
+  "solid_fraction": 0.5281122103,
+  "fluid_power_W": 201.5112050472491,
+  "solid_power_W": 225.52083402152763,
+  "target_card_fluid_power_W": 201.5112,
+  "target_card_solid_power_W": 225.5208,
+  "source_method": "scalarSemiImplicitSource on h in bottomWater and heater regions; volumeMode absolute",
+  "radial_cells": 50,
+  "solid_cells": 8,
+  "end_time": 400,
+  "write_interval": 400
+}

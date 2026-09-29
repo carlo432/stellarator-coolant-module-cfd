@@ -1,0 +1,12 @@
+FoamFile
+{
+    version 2.0; format ascii; class volScalarField; object T;
+}
+dimensions [0 0 0 1 0 0 0];
+internalField uniform 900;
+boundaryField
+{
+    inlet { type fixedValue; value uniform 900; }
+    outlet { type inletOutlet; inletValue uniform 900; value uniform 900; }
+    "(heated_first_wall|blanket_back_wall|side_walls)" { type zeroGradient; }
+}

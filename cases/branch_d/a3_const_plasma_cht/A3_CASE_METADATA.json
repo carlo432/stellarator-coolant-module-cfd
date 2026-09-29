@@ -1,0 +1,30 @@
+{
+  "track": "A3 temperature-dependent-property CHT",
+  "model": "constant",
+  "source_case": "cases/branch_d/cht_wallres_500",
+  "common_start_time": 3000,
+  "end_time": 5000,
+  "write_interval": 250,
+  "inlet_temperature_K": 800.0,
+  "heat_flux_source": "cases/branch_d/figs/plasma_qmap.json",
+  "heat_flux_mapping": "one toroidal q-map period mapped linearly onto the 0.4 m streamwise heated base and area-normalized",
+  "heat_flux": {
+    "n_patch_faces": 640,
+    "patch_area_m2": 0.016,
+    "source_period_m": 0.2984513020910304,
+    "channel_length_m": 0.4,
+    "raw_interpolated_mean_W_m2": 502642.0715027958,
+    "applied_mean_W_m2": 500000.00000000006,
+    "applied_min_W_m2": 249105.7767544036,
+    "applied_max_W_m2": 1570924.2243242182,
+    "applied_peak_over_mean": 3.141848448648436,
+    "normalization_factor": 0.9947436323925362,
+    "solid_k_W_mK": 30.0
+  },
+  "property_model": {
+    "mu_Pa_s": 0.006,
+    "kappa_W_mK": 1.0,
+    "rho_kg_m3": 1940.0,
+    "Cp_J_kgK": 2400.0
+  }
+}

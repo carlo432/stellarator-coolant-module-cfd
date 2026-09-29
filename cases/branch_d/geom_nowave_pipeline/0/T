@@ -1,0 +1,23 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile { version 2.0; format ascii; class volScalarField; object T; }
+dimensions [0 0 0 1 0 0 0];
+internalField uniform 900;
+boundaryField
+{
+    inlet { type fixedValue; value uniform 900; }
+    outlet { type inletOutlet; inletValue uniform 900; value uniform 900; }
+    heated_first_wall
+    {
+        type exprMixed;
+        refValue uniform 900;
+        refGradient uniform 500646;
+        valueFraction uniform 0;
+        source uniform 0;
+        value uniform 900;
+        valueExpr #{ 900 #};
+        gradientExpr #{ 500000 / (4.65e+06 * (0.0694444 * 3.09278e-06 + 1.11111 * nut)) #};
+        fractionExpr #{ 0 #};
+        variables ();
+    }
+    "(blanket_back_wall|side_walls)" { type zeroGradient; }
+}

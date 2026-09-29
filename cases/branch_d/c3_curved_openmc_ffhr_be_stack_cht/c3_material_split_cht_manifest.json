@@ -1,0 +1,23 @@
+{
+  "case": "cases/branch_d/c3_curved_openmc_ffhr_be_stack_cht",
+  "basis": "C2 curved CHT geometry with external base flux disabled",
+  "target_id": "c3_ms_openmc_ffhr_be_stack",
+  "target_csv": "/root/revengence/results/c3_material_split_targets.csv",
+  "literature_basis": "OpenMC 5mm steel-proxy plus 2cm front FLiBe plus 12cm Be proxy plus 14cm rear FLiBe plus 5mm steel-proxy CSG stack tallied with heating-local",
+  "solver_use": "OpenMC-tallied FFHR-like Be/FLiBe stack follow-on; Be layer aggregated into solid source",
+  "target_heat_flux_W_m2": 100000.0,
+  "heated_base_area_m2": 0.004270320390687767,
+  "total_power_W": 427.0320390687767,
+  "target_card_total_reference_power_W": 427.0320391,
+  "fluid_fraction": 0.5291766617,
+  "solid_fraction": 0.4708233383,
+  "fluid_power_W": 225.97538887335924,
+  "solid_power_W": 201.0566501954175,
+  "target_card_fluid_power_W": 225.9754,
+  "target_card_solid_power_W": 201.0567,
+  "source_method": "scalarSemiImplicitSource on h in bottomWater and heater regions; volumeMode absolute",
+  "radial_cells": 50,
+  "solid_cells": 8,
+  "end_time": 400,
+  "write_interval": 400
+}

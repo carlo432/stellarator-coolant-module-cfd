@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+export OMPI_ALLOW_RUN_AS_ROOT=1 OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
+source /usr/lib/openfoam/openfoam2512/etc/bashrc >/dev/null 2>&1 || true
+cd "$(dirname "$0")"
+
+echo "V5_START $(date)" > STATUS.v5
+mpirun --use-hwthread-cpus -np 8 pimpleFoam -parallel </dev/null \
+    > log.pimpleFoam.v5 2>&1
+echo "V5_SOLVED $(date)" >> STATUS.v5
+reconstructPar -newTimes -time '8.75:' > log.reconstructPar.v5 2>&1
+echo "V5_DONE $(date)" >> STATUS.v5

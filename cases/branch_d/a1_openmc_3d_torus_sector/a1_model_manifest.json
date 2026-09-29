@@ -1,0 +1,59 @@
+{
+  "geometry_kind": "full 360-degree outboard annular blanket ring; five field periods folded in postprocessing",
+  "length_unit": "OpenMC CSG dimensions are cm; manifest values below are reported in m",
+  "wall_radius_m": 6.234565012598504,
+  "first_wall_thickness_m": 0.005,
+  "blanket_thickness_m": 0.5,
+  "back_wall_thickness_m": 0.005,
+  "inner_vacuum_radius_m": 4.591138755855344,
+  "z_half_height_m": 0.963170087451457,
+  "n_phi_tally": 160,
+  "n_blanket_depth": 10,
+  "cell_ids": {
+    "plasma_and_standoff_void": 1,
+    "first_wall": 2,
+    "flibe_blanket": 3,
+    "back_wall": 4
+  },
+  "source_mesh_id": 1,
+  "wall_mesh_id": 2,
+  "heat_mesh_id": 3,
+  "heat_r_edges_cm": [
+    623.4565012598505,
+    623.9565012598505,
+    628.9565012598505,
+    633.9565012598505,
+    638.9565012598505,
+    643.9565012598505,
+    648.9565012598505,
+    653.9565012598505,
+    658.9565012598505,
+    663.9565012598505,
+    668.9565012598505,
+    673.9565012598505,
+    674.4565012598504
+  ],
+  "source_description": "DESC W7-X example equilibrium; emissivity proportional to (1-rho^2)^3",
+  "source_capture_fraction": 0.9999999999999999,
+  "source_nonzero_bins": 18803,
+  "source_sample_points": 51200,
+  "source_mesh_dimensions": [
+    24,
+    160,
+    24
+  ],
+  "plasma_R_min_m": 4.641138755855344,
+  "plasma_R_max_m": 6.203464976217336,
+  "plasma_abs_Z_max_m": 0.913170087451457,
+  "standoff_range_m": [
+    0.03000000000000025,
+    0.27178368949540843
+  ],
+  "li6_fraction": 0.9,
+  "particles": 100000,
+  "batches": 20,
+  "seed": 170711,
+  "source_energy_eV": 14100000.0,
+  "cross_sections": "/root/openmc_data/combined_neutron_photon_all.xml",
+  "openmc_executable": "/root/openmc-src/build/bin/openmc"
+}

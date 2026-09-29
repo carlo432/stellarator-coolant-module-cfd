@@ -1,0 +1,243 @@
+{
+  "case": "cases/branch_d/c3_curved_openmc_ffhr_be_stack_depth_mapped_cht",
+  "basis": "C2 curved CHT geometry with external base flux disabled",
+  "source_method": "FFHR-like OpenMC region-depth heating resampled to streamwise fluid and solid cellZones; scalarSemiImplicitSource on h",
+  "mapping_caveat": "OpenMC stack depth is mapped onto streamwise stations as a local plumbing/sensitivity exercise, not as a physical wall-normal source map.",
+  "target_heat_flux_W_m2": 100000.0,
+  "heated_base_area_m2": 0.004270320390687767,
+  "total_power_W": 427.0320390687767,
+  "mapped_power_sum_W": 427.0320390687767,
+  "fluid_power_W": 225.9753888563003,
+  "solid_power_W": 201.05665021247643,
+  "fluid_fraction": 0.5291766616600523,
+  "solid_fraction": 0.4708233383399477,
+  "segments": 24,
+  "fluid_block_cells_per_source_zone": 1600,
+  "solid_block_cells_per_source_zone": 256,
+  "stack_thickness_m": 0.29000000000000004,
+  "region_depth_profile": "cases/branch_d/figs/c3_openmc_ffhr_be_stack_heating_split_region_depth.csv",
+  "openmc_summary": "cases/branch_d/figs/c3_openmc_ffhr_be_stack_heating_split.json",
+  "openmc_max_depth_relative_uncertainty": 0.04682252704760262,
+  "fluid_source_power_min_W": 0.0,
+  "fluid_source_power_max_W": 17.128641226083886,
+  "solid_source_power_min_W": 0.0,
+  "solid_source_power_max_W": 17.4112813597092,
+  "mapping": [
+    {
+      "station": 0,
+      "fluid_zone": "c3FFHRFluidSource_00",
+      "solid_zone": "c3FFHRSolidSource_00",
+      "fluid_fraction_of_total": 0.023461360040489244,
+      "solid_fraction_of_total": 0.037062654673095434,
+      "fluid_power_W": 10.01875241741684,
+      "solid_power_W": 15.82694099835387
+    },
+    {
+      "station": 1,
+      "fluid_zone": "c3FFHRFluidSource_01",
+      "solid_zone": "c3FFHRSolidSource_01",
+      "fluid_fraction_of_total": 0.0399983788355894,
+      "solid_fraction_of_total": 2.0968282420559896e-19,
+      "fluid_power_W": 17.080589273607142,
+      "solid_power_W": 8.954128397821678e-17
+    },
+    {
+      "station": 2,
+      "fluid_zone": "c3FFHRFluidSource_02",
+      "solid_zone": "c3FFHRSolidSource_02",
+      "fluid_fraction_of_total": 0.0027569227446679863,
+      "solid_fraction_of_total": 0.03704559335297604,
+      "fluid_power_W": 1.1772943412106587,
+      "solid_power_W": 15.81965526803408
+    },
+    {
+      "station": 3,
+      "fluid_zone": "c3FFHRFluidSource_03",
+      "solid_zone": "c3FFHRSolidSource_03",
+      "fluid_fraction_of_total": 0.0,
+      "solid_fraction_of_total": 0.03970798918974082,
+      "fluid_power_W": 0.0,
+      "solid_power_W": 16.956583591015967
+    },
+    {
+      "station": 4,
+      "fluid_zone": "c3FFHRFluidSource_04",
+      "solid_zone": "c3FFHRSolidSource_04",
+      "fluid_fraction_of_total": 0.0,
+      "solid_fraction_of_total": 0.039597783517530856,
+      "fluid_power_W": 0.0,
+      "solid_power_W": 16.9095222380952
+    },
+    {
+      "station": 5,
+      "fluid_zone": "c3FFHRFluidSource_05",
+      "solid_zone": "c3FFHRSolidSource_05",
+      "fluid_fraction_of_total": 0.0,
+      "solid_fraction_of_total": 0.039621160655851494,
+      "fluid_power_W": 0.0,
+      "solid_power_W": 16.919505025139856
+    },
+    {
+      "station": 6,
+      "fluid_zone": "c3FFHRFluidSource_06",
+      "solid_zone": "c3FFHRSolidSource_06",
+      "fluid_fraction_of_total": 0.0,
+      "solid_fraction_of_total": 0.039686229711918514,
+      "fluid_power_W": 0.0,
+      "solid_power_W": 16.947291596832436
+    },
+    {
+      "station": 7,
+      "fluid_zone": "c3FFHRFluidSource_07",
+      "solid_zone": "c3FFHRSolidSource_07",
+      "fluid_fraction_of_total": 0.0,
+      "solid_fraction_of_total": 0.03993093940749815,
+      "fluid_power_W": 0.0,
+      "solid_power_W": 17.051790477115706
+    },
+    {
+      "station": 8,
+      "fluid_zone": "c3FFHRFluidSource_08",
+      "solid_zone": "c3FFHRSolidSource_08",
+      "fluid_fraction_of_total": 0.0,
+      "solid_fraction_of_total": 0.040138286868923234,
+      "fluid_power_W": 0.0,
+      "solid_power_W": 17.140334486363795
+    },
+    {
+      "station": 9,
+      "fluid_zone": "c3FFHRFluidSource_09",
+      "solid_zone": "c3FFHRSolidSource_09",
+      "fluid_fraction_of_total": 0.0,
+      "solid_fraction_of_total": 0.04043778431154403,
+      "fluid_power_W": 0.0,
+      "solid_power_W": 17.268229489982037
+    },
+    {
+      "station": 10,
+      "fluid_zone": "c3FFHRFluidSource_10",
+      "solid_zone": "c3FFHRSolidSource_10",
+      "fluid_fraction_of_total": 0.0,
+      "solid_fraction_of_total": 0.0407727752645393,
+      "fluid_power_W": 0.0,
+      "solid_power_W": 17.4112813597092
+    },
+    {
+      "station": 11,
+      "fluid_zone": "c3FFHRFluidSource_11",
+      "solid_zone": "c3FFHRSolidSource_11",
+      "fluid_fraction_of_total": 9.185516155080134e-19,
+      "solid_fraction_of_total": 0.03993325087615884,
+      "fluid_power_W": 3.9225096936030597e-16,
+      "solid_power_W": 17.052777548291125
+    },
+    {
+      "station": 12,
+      "fluid_zone": "c3FFHRFluidSource_12",
+      "solid_zone": "c3FFHRSolidSource_12",
+      "fluid_fraction_of_total": 0.04003120334064397,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.09460638893202,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 13,
+      "fluid_zone": "c3FFHRFluidSource_13",
+      "solid_zone": "c3FFHRSolidSource_13",
+      "fluid_fraction_of_total": 0.0399973406441274,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.08014593259018,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 14,
+      "fluid_zone": "c3FFHRFluidSource_14",
+      "solid_zone": "c3FFHRSolidSource_14",
+      "fluid_fraction_of_total": 0.03999890470724464,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.08081383765237,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 15,
+      "fluid_zone": "c3FFHRFluidSource_15",
+      "solid_zone": "c3FFHRSolidSource_15",
+      "fluid_fraction_of_total": 0.03989480680480065,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.03636069810893,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 16,
+      "fluid_zone": "c3FFHRFluidSource_16",
+      "solid_zone": "c3FFHRSolidSource_16",
+      "fluid_fraction_of_total": 0.0399500314272469,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.059943381238956,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 17,
+      "fluid_zone": "c3FFHRFluidSource_17",
+      "solid_zone": "c3FFHRSolidSource_17",
+      "fluid_fraction_of_total": 0.03987636399288875,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.028485026532028,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 18,
+      "fluid_zone": "c3FFHRFluidSource_18",
+      "solid_zone": "c3FFHRSolidSource_18",
+      "fluid_fraction_of_total": 0.03982828750035768,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.007954823895215,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 19,
+      "fluid_zone": "c3FFHRFluidSource_19",
+      "solid_zone": "c3FFHRSolidSource_19",
+      "fluid_fraction_of_total": 0.039983883553933015,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.074399323924542,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 20,
+      "fluid_zone": "c3FFHRFluidSource_20",
+      "solid_zone": "c3FFHRSolidSource_20",
+      "fluid_fraction_of_total": 0.040110904239026406,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.128641226083886,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 21,
+      "fluid_zone": "c3FFHRFluidSource_21",
+      "solid_zone": "c3FFHRSolidSource_21",
+      "fluid_fraction_of_total": 0.039905852102359744,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.04107739404771,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 22,
+      "fluid_zone": "c3FFHRFluidSource_22",
+      "solid_zone": "c3FFHRSolidSource_22",
+      "fluid_fraction_of_total": 0.04001126800670672,
+      "solid_fraction_of_total": 0.0,
+      "fluid_power_W": 17.08609336263128,
+      "solid_power_W": 0.0
+    },
+    {
+      "station": 23,
+      "fluid_zone": "c3FFHRFluidSource_23",
+      "solid_zone": "c3FFHRSolidSource_23",
+      "fluid_fraction_of_total": 0.02337115371996982,
+      "solid_fraction_of_total": 0.03688889051017099,
+      "fluid_power_W": 9.980231428428539,
+      "solid_power_W": 15.752738133543165
+    }
+  ]
+}

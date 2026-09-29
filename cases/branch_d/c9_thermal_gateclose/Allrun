@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+export OMPI_ALLOW_RUN_AS_ROOT=1 OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
+source /usr/lib/openfoam/openfoam2512/etc/bashrc >/dev/null 2>&1 || true
+cd "$(dirname "$0")"
+echo "START $(date)" > STATUS
+decomposePar -time 4.3999142004455196 > log.decomposePar 2>&1
+echo "DECOMPOSED $(date)" >> STATUS
+mpirun --use-hwthread-cpus -np 8 pimpleFoam -parallel </dev/null > log.pimpleFoam 2>&1
+echo "SOLVED $(date)" >> STATUS
+reconstructPar -latestTime > log.reconstructPar 2>&1
+echo "DONE $(date)" >> STATUS

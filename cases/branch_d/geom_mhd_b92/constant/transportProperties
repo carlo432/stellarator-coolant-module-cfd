@@ -1,0 +1,5 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile { version 2.0; format ascii; class dictionary; object transportProperties; }
+transportModel Newtonian;
+nu [0 2 -1 0 0 0 0] 3.09278e-06;
+DT [0 2 -1 0 0 0 0] 2.14776388889e-07;

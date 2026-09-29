@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+source /usr/lib/openfoam/openfoam2512/etc/bashrc >/dev/null 2>&1 || source /usr/lib/openfoam/openfoam2506/etc/bashrc >/dev/null 2>&1
+set -euo pipefail
+cd "$(dirname "$0")"
+blockMesh > log.blockMesh 2>&1
+./write_cell_zones_c2cht.py > log.cellZones 2>&1
+splitMeshRegions -cellZones -overwrite > log.split 2>&1
+./write_c3_ffhr_depth_mapped_cell_zones.py > log.c3DepthMappedZones 2>&1
+checkMesh -allRegions > log.checkMesh 2>&1

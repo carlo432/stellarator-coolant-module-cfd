@@ -1,0 +1,14 @@
+{
+  "case": "cases/branch_d/c3_openmc_flibe_slab",
+  "cross_sections": "/root/openmc_data/combined_neutron_photon_all.xml",
+  "openmc_exec": "/root/openmc-src/build/bin/openmc",
+  "slab_thickness_m": 0.2,
+  "half_width_m": 0.008,
+  "half_height_m": 0.008,
+  "bins": 20,
+  "particles": 2000,
+  "batches": 5,
+  "li6_fraction": 0.9,
+  "target_heat_flux_W_m2": 100000.0,
+  "run_requested": true
+}

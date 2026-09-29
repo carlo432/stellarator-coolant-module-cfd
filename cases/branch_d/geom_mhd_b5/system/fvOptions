@@ -1,0 +1,9 @@
+FoamFile { version 2.0; format ascii; class dictionary; object fvOptions; }
+mhdLorentzDrag
+{
+    type            vectorSemiImplicitSource;
+    selectionMode   all;
+    volumeMode      specific;
+    // conducting-wall worst-case linear drag: r = sigma*B^2/rho = 2.577 1/s
+    sources { U ((0 0 0) -2.577); }
+}

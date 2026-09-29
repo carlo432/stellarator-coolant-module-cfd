@@ -1,0 +1,87 @@
+{
+  "case": "cases/branch_d/c3_openmc_ffhr_be_stack",
+  "cross_sections": "/root/openmc_data/combined_neutron_photon_all.xml",
+  "openmc_exec": "/root/openmc-src/build/bin/openmc",
+  "front_wall_thickness_m": 0.005,
+  "front_flibe_thickness_m": 0.02,
+  "be_thickness_m": 0.12,
+  "rear_flibe_thickness_m": 0.14,
+  "back_wall_thickness_m": 0.005,
+  "half_width_m": 0.008,
+  "half_height_m": 0.008,
+  "bins": 58,
+  "particles": 4000,
+  "batches": 8,
+  "li6_fraction": 0.9,
+  "target_power_W": 427.0320391,
+  "target_heat_flux_W_m2": 100000.0,
+  "run_requested": true,
+  "total_thickness_m": 0.29000000000000004,
+  "region_bounds_m": {
+    "front_wall": [
+      0.0,
+      0.005
+    ],
+    "front_flibe": [
+      0.005,
+      0.025
+    ],
+    "be_multiplier_proxy": [
+      0.025,
+      0.145
+    ],
+    "rear_flibe": [
+      0.145,
+      0.28500000000000003
+    ],
+    "back_wall": [
+      0.28500000000000003,
+      0.29000000000000004
+    ]
+  },
+  "cell_ids": {
+    "front_wall": 1,
+    "front_flibe": 2,
+    "be_multiplier_proxy": 3,
+    "rear_flibe": 4,
+    "back_wall": 5
+  },
+  "material_ids": {
+    "front_wall": 1,
+    "front_flibe": 2,
+    "be_multiplier_proxy": 3,
+    "rear_flibe": 4,
+    "back_wall": 5
+  },
+  "thicknesses_m": {
+    "front_wall": 0.005,
+    "front_flibe": 0.02,
+    "be_multiplier_proxy": 0.12,
+    "rear_flibe": 0.14,
+    "back_wall": 0.005
+  },
+  "summary": {
+    "case": "cases/branch_d/c3_openmc_ffhr_be_stack",
+    "statepoint": "cases/branch_d/c3_openmc_ffhr_be_stack/statepoint.8.h5",
+    "status": "C3 FFHR-like Be/FLiBe stack OpenMC source-placement tally; not reactor neutronics",
+    "total_thickness_m": 0.29000000000000004,
+    "bins": 58,
+    "target_power_W": 427.0320391,
+    "target_heat_flux_W_m2": 100000.0,
+    "reference_area_m2": 0.004270320391,
+    "cell_total_heating_eV_per_source": 112149.0306494046,
+    "depth_total_heating_eV_per_source": 112149.03064939413,
+    "cell_total_heating_J_per_source": 1.7968255643222588e-14,
+    "fluid_fraction": 0.5291766616600543,
+    "solid_fraction": 0.47082333833994566,
+    "fluid_power_W": 225.9753888728238,
+    "solid_power_W": 201.05665022717622,
+    "max_region_relative_uncertainty": 0.005400056749622783,
+    "max_depth_relative_uncertainty": 0.04682252704760262,
+    "region_csv": "cases/branch_d/figs/c3_openmc_ffhr_be_stack_heating_split_region_split.csv",
+    "class_csv": "cases/branch_d/figs/c3_openmc_ffhr_be_stack_heating_split_class_split.csv",
+    "depth_csv": "cases/branch_d/figs/c3_openmc_ffhr_be_stack_heating_split_depth_profile.csv",
+    "region_depth_csv": "cases/branch_d/figs/c3_openmc_ffhr_be_stack_heating_split_region_depth.csv",
+    "png": "cases/branch_d/figs/c3_openmc_ffhr_be_stack_heating_split.png"
+  }
+}

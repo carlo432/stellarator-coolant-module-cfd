@@ -1,0 +1,38 @@
+{
+  "version": 7,
+  "version_note": "v2: flatness_time_start moved 2.4->5.15 for the gateclose sibling: times 4.4-5.2 are the deliberate final approach to equilibrium. v3: flatness_mean=volume per a pre-endpoint review challenge -- the mesh is wall-graded (V_max/V_min=36), so the physical scalar inventory is volume-weighted; arithmetic remains reported. v4: balance is measured on HMean/H1Mean/H2Mean because instantaneous wall flux is noise-dominated; instantaneous flux remains reported. v5, preregistered before restarting from 5.5998835: extend to 9.2 s, preserve the cumulative 5.2+ fieldAverage state with restartOnRestart=false, and judge flatness over the final 8.75+ window. v6, preregistered at solver t~6.67 (no 8.75+ data exist): the GOVERNING balance flux is the late-window mean over [first write >= balance_window_start, endpoint], derived exactly from two cumulative writes and their recorded fieldAverage totalTime values as (M2*T2 - M1*T1)/(T2 - T1). Rationale: the 5.6 endpoint verdict proved the balance deficit is pure storage (deficit = 0.01*d<H>vol/dt to 1.00x closure on all three scalars), so a cumulative 5.2+ accumulator permanently drags that documented filling transient into the mean -- even a fully equilibrated late field would fail on accumulator lag. The window aligns with the v5 flatness window (8.75+). Cumulative and instantaneous fluxes remain reported alongside. Balance tolerance remains 5%, flatness tolerance remains 1%, balance fields/source/wall fits unchanged. v7, preregistered at solver t~6.78 per the user's decision to continue the run: endTime raised 9.2->14.5 (runTimeModifiable, live), balance_window_start and flatness_time_start moved 8.75->13.5. Rationale: the measured relaxation time tau(H)=8.9 s projects the H deficit at ~7.0% at 9.2 s (certain FAIL) but ~4.1% over a [13.5,14.5] window, robust to a +30% error in tau (5.08% worst case). H1/H2 are deep-converged by then. No data past t~6.78 existed when registered; tolerances unchanged.",
+  "balance_window_start": 13.5,
+  "flatness_mean": "volume",
+  "volume_field": "V",
+  "balance_model": "closed_periodic_channel_with_two_fixed-value_wall_sinks",
+  "coordinate_field": "Cy",
+  "walls_m": [0.0, 0.02],
+  "wall_values": [0.0, 0.0],
+  "source_to_sink_area_length_m": 0.01,
+  "near_wall_fit_levels": 3,
+  "coordinate_round_decimals": 9,
+  "balance_tolerance_fraction": 0.05,
+  "flatness_time_start": 13.5,
+  "flatness_tolerance_fraction": 0.01,
+  "minimum_flatness_snapshots": 3,
+  "scalars": [
+    {
+      "field": "H",
+      "balance_field": "HMean",
+      "molecular_diffusivity_m2_s": 6.18556e-7,
+      "source": {"type": "constant_mean", "mean_value_per_s": 5.567004}
+    },
+    {
+      "field": "H1",
+      "balance_field": "H1Mean",
+      "molecular_diffusivity_m2_s": 3.09278e-6,
+      "source": {"type": "constant_mean", "mean_value_per_s": 5.567004}
+    },
+    {
+      "field": "H2",
+      "balance_field": "H2Mean",
+      "molecular_diffusivity_m2_s": 1.54639e-6,
+      "source": {"type": "constant_mean", "mean_value_per_s": 5.567004}
+    }
+  ]
+}

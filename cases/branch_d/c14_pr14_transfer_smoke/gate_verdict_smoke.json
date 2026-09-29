@@ -1,0 +1,64 @@
+{
+  "case": ".",
+  "contract": "constant/sourceDrivenScalarGate.json",
+  "status": "FAIL",
+  "statistics_allowed": false,
+  "scalars": [
+    {
+      "field": "H",
+      "latest_time": 0.010107754,
+      "balance_field": "HMean",
+      "balance_time": 0.010107754,
+      "balance_mode": "window_mean",
+      "balance_window": [
+        0.0061077545,
+        0.010107754
+      ],
+      "source_mean_per_s": 5.567004000000001,
+      "expected_mean_wall_flux": 0.05567004000000001,
+      "measured_mean_wall_flux": 5.8020286227639004e-06,
+      "measured_mean_wall_flux_cumulative": 5.218428546549936e-06,
+      "measured_mean_wall_flux_instantaneous": 6.5352003629423775e-06,
+      "balance_relative_error": 0.9998957782566212,
+      "balance_fraction_of_target": 0.00010422174337873477,
+      "flatness_history": [
+        {
+          "time": 0.0061077545,
+          "cell_mean": 0.023627661404633786,
+          "volume_weighted_mean": 0.040309466883112405
+        },
+        {
+          "time": 0.0081077545,
+          "cell_mean": 0.02944999700246786,
+          "volume_weighted_mean": 0.051442457077324616
+        },
+        {
+          "time": 0.010107754,
+          "cell_mean": 0.03533399058252162,
+          "volume_weighted_mean": 0.06257619734704321
+        }
+      ],
+      "flatness_mean_type": "volume",
+      "flatness_relative_range": 0.43284523148377524,
+      "flatness_relative_range_arithmetic": 0.39722127044350636,
+      "minimum_flatness_snapshots": 3,
+      "balance_tolerance_fraction": 0.05,
+      "flatness_tolerance_fraction": 0.01,
+      "wall_flux_detail": {
+        "lower_gradient": 7.485636347099661,
+        "upper_gradient": 46.542915420436444,
+        "lower_flux": 1.6077379431654784e-06,
+        "upper_flux": 9.996319302362322e-06,
+        "mean_wall_flux": 5.8020286227639004e-06
+      },
+      "instantaneous_wall_flux_detail": {
+        "lower_gradient": 4.065685268330342,
+        "upper_gradient": 56.790169481357786,
+        "lower_flux": 8.732132002907441e-07,
+        "upper_flux": 1.219718752559401e-05,
+        "mean_wall_flux": 6.5352003629423775e-06
+      },
+      "passed": false
+    }
+  ]
+}

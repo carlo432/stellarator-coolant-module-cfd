@@ -1,0 +1,15 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile { version 2.0; format ascii; class dictionary; object controlDict; }
+application pimpleFoam;
+startFrom latestTime; startTime 0; stopAt endTime;
+endTime 4.0; deltaT 1e-4;          // ~74 flow-through total (tau=0.0542 s)
+writeControl timeStep; writeInterval 3000; purgeWrite 3;   // periodic checkpoints incl near-end; NO per-step bloat
+writeFormat ascii; writePrecision 8; writeCompression off;
+timeFormat general; timePrecision 6; runTimeModifiable true;
+adjustTimeStep yes; maxCo 0.6; maxDeltaT 5e-4;
+functions
+{
+ fieldAverage1 { type fieldAverage; libs (fieldFunctionObjects); timeStart 1.5; writeControl writeTime; restartOnOutput false;
+   fields ( U { mean on; prime2Mean on; base time; } p { mean on; prime2Mean on; base time; } ); }
+ yPlus { type yPlus; libs (fieldFunctionObjects); writeControl writeTime; }
+}

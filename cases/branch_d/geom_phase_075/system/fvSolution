@@ -1,0 +1,17 @@
+FoamFile
+{
+    version 2.0; format ascii; class dictionary; object fvSolution;
+}
+solvers
+{
+    p { solver GAMG; smoother GaussSeidel; tolerance 1e-7; relTol 0.01; }
+    pFinal { solver GAMG; smoother GaussSeidel; tolerance 1e-7; relTol 0; }
+    "(U|T|Ctrit)" { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-8; relTol 0.1; }
+    "(U|T|Ctrit)Final" { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-8; relTol 0; }
+}
+PIMPLE
+{
+    nOuterCorrectors 1;
+    nCorrectors 2;
+    nNonOrthogonalCorrectors 1;
+}

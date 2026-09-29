@@ -1,0 +1,13 @@
+{
+  "source_flow_case": "c2_straight_control_preflight",
+  "source_flow_time": "120",
+  "thermal_case": "c2_straight_control_thermal_equal_power",
+  "end_time_s": 0.2,
+  "delta_t_s": 0.00025,
+  "heated_wall_area_m2": 0.0048264640624,
+  "source_heated_wall_gradient": 100000.0,
+  "applied_heated_wall_gradient": 100000.0,
+  "gradient_area_product": 482.64640624,
+  "gradient_mode": "copied_from_source",
+  "match_reference_case": null
+}

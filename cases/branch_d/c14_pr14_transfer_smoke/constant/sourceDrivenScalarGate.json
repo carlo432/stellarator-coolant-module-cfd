@@ -1,0 +1,36 @@
+{
+  "version": 7,
+  "version_note": "Generated at the final C9 v7 standard: late-window mean balance from fieldAverage totalTime accumulators, volume-weighted flatness, and stale-endpoint enforcement. A short smoke is machinery-only and is expected not to pass.",
+  "balance_window_start": 0.006,
+  "flatness_mean": "volume",
+  "volume_field": "V",
+  "balance_model": "closed_periodic_channel_with_two_fixed-value_wall_sinks",
+  "coordinate_field": "Cy",
+  "walls_m": [
+    0.0,
+    0.02
+  ],
+  "wall_values": [
+    0.0,
+    0.0
+  ],
+  "source_to_sink_area_length_m": 0.01,
+  "near_wall_fit_levels": 3,
+  "coordinate_round_decimals": 10,
+  "balance_tolerance_fraction": 0.05,
+  "flatness_time_start": 0.006,
+  "flatness_tolerance_fraction": 0.01,
+  "minimum_flatness_snapshots": 3,
+  "scalars": [
+    {
+      "field": "H",
+      "balance_field": "HMean",
+      "molecular_diffusivity_m2_s": 2.147763888888889e-07,
+      "source": {
+        "type": "constant_mean",
+        "mean_value_per_s": 5.567004000000001,
+        "basis": "meanVelocityForce fixes volume-mean U.x/Ubar to one"
+      }
+    }
+  ]
+}

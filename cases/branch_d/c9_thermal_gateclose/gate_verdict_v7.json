@@ -1,0 +1,281 @@
+{
+  "case": "c9_thermal_gateclose",
+  "contract": "c9_thermal_gateclose/constant/sourceDrivenScalarGate.json",
+  "status": "PASS",
+  "statistics_allowed": true,
+  "scalars": [
+    {
+      "field": "H",
+      "latest_time": 14.499815395987236,
+      "balance_field": "HMean",
+      "balance_time": 14.499815395987236,
+      "balance_mode": "window_mean",
+      "balance_window": [
+        13.599939892153357,
+        14.499815395987236
+      ],
+      "source_mean_per_s": 5.567004,
+      "expected_mean_wall_flux": 0.05567004,
+      "measured_mean_wall_flux": 0.05534223245680929,
+      "measured_mean_wall_flux_cumulative": 0.052465831011365864,
+      "measured_mean_wall_flux_instantaneous": 0.05320051213085249,
+      "balance_relative_error": 0.0058884014308361755,
+      "balance_fraction_of_target": 0.9941115985691639,
+      "flatness_history": [
+        {
+          "time": 13.599939892153357,
+          "cell_mean": 37.64872561151371,
+          "volume_weighted_mean": 47.10939193267085
+        },
+        {
+          "time": 13.699809615913114,
+          "cell_mean": 37.79856675043873,
+          "volume_weighted_mean": 47.120998980830485
+        },
+        {
+          "time": 13.799858419310073,
+          "cell_mean": 37.79194403534491,
+          "volume_weighted_mean": 47.12061328391497
+        },
+        {
+          "time": 13.899978645910755,
+          "cell_mean": 37.779516257399145,
+          "volume_weighted_mean": 47.117644779434386
+        },
+        {
+          "time": 13.999934624944371,
+          "cell_mean": 37.744496086317824,
+          "volume_weighted_mean": 47.12705841489266
+        },
+        {
+          "time": 14.09983284279013,
+          "cell_mean": 37.697319869261165,
+          "volume_weighted_mean": 47.136996484412016
+        },
+        {
+          "time": 14.199829796379623,
+          "cell_mean": 37.79813746186519,
+          "volume_weighted_mean": 47.144115778214534
+        },
+        {
+          "time": 14.299873558539545,
+          "cell_mean": 37.82256901239962,
+          "volume_weighted_mean": 47.13793757879921
+        },
+        {
+          "time": 14.399931614652617,
+          "cell_mean": 37.83658609177605,
+          "volume_weighted_mean": 47.13430207096286
+        },
+        {
+          "time": 14.499815395987236,
+          "cell_mean": 37.71464087214324,
+          "volume_weighted_mean": 47.138406054115
+        }
+      ],
+      "flatness_mean_type": "volume",
+      "flatness_relative_range": 0.000736786952678356,
+      "flatness_relative_range_arithmetic": 0.004974690452842165,
+      "minimum_flatness_snapshots": 3,
+      "balance_tolerance_fraction": 0.05,
+      "flatness_tolerance_fraction": 0.01,
+      "wall_flux_detail": {
+        "lower_gradient": 90715.36776302074,
+        "upper_gradient": -88224.71997942873,
+        "lower_flux": 0.05611253502202306,
+        "upper_flux": 0.054571929891595525,
+        "mean_wall_flux": 0.05534223245680929
+      },
+      "instantaneous_wall_flux_detail": {
+        "lower_gradient": 85083.85414416867,
+        "upper_gradient": -86931.33002946309,
+        "lower_flux": 0.0526291284840004,
+        "upper_flux": 0.053771895777704574,
+        "mean_wall_flux": 0.05320051213085249
+      },
+      "passed": true
+    },
+    {
+      "field": "H1",
+      "latest_time": 14.499815395987236,
+      "balance_field": "H1Mean",
+      "balance_time": 14.499815395987236,
+      "balance_mode": "window_mean",
+      "balance_window": [
+        13.599939892153357,
+        14.499815395987236
+      ],
+      "source_mean_per_s": 5.567004,
+      "expected_mean_wall_flux": 0.05567004,
+      "measured_mean_wall_flux": 0.056647518173387576,
+      "measured_mean_wall_flux_cumulative": 0.05481773589996553,
+      "measured_mean_wall_flux_instantaneous": 0.05532055814789074,
+      "balance_relative_error": 0.017558424125213114,
+      "balance_fraction_of_target": 1.0175584241252131,
+      "flatness_history": [
+        {
+          "time": 13.599939892153357,
+          "cell_mean": 13.126000799091992,
+          "volume_weighted_mean": 18.380962647341953
+        },
+        {
+          "time": 13.699809615913114,
+          "cell_mean": 13.174143840095464,
+          "volume_weighted_mean": 18.36919345787918
+        },
+        {
+          "time": 13.799858419310073,
+          "cell_mean": 13.165654266301065,
+          "volume_weighted_mean": 18.353544846082887
+        },
+        {
+          "time": 13.899978645910755,
+          "cell_mean": 13.111912500322877,
+          "volume_weighted_mean": 18.33562313915418
+        },
+        {
+          "time": 13.999934624944371,
+          "cell_mean": 13.085148005837572,
+          "volume_weighted_mean": 18.339950861060192
+        },
+        {
+          "time": 14.09983284279013,
+          "cell_mean": 13.101339043390755,
+          "volume_weighted_mean": 18.346621021406833
+        },
+        {
+          "time": 14.199829796379623,
+          "cell_mean": 13.133761749045362,
+          "volume_weighted_mean": 18.339014744923233
+        },
+        {
+          "time": 14.299873558539545,
+          "cell_mean": 13.140966328809096,
+          "volume_weighted_mean": 18.31759060450846
+        },
+        {
+          "time": 14.399931614652617,
+          "cell_mean": 13.14131218436674,
+          "volume_weighted_mean": 18.298464346866105
+        },
+        {
+          "time": 14.499815395987236,
+          "cell_mean": 13.094367089279492,
+          "volume_weighted_mean": 18.29275213174309
+        }
+      ],
+      "flatness_mean_type": "volume",
+      "flatness_relative_range": 0.004810423034265304,
+      "flatness_relative_range_arithmetic": 0.006779364044638238,
+      "minimum_flatness_snapshots": 3,
+      "balance_tolerance_fraction": 0.05,
+      "flatness_tolerance_fraction": 0.01,
+      "wall_flux_detail": {
+        "lower_gradient": 18482.69815054546,
+        "upper_gradient": -18149.40511796221,
+        "lower_flux": 0.05716291918604399,
+        "upper_flux": 0.05613211716073117,
+        "mean_wall_flux": 0.056647518173387576
+      },
+      "instantaneous_wall_flux_detail": {
+        "lower_gradient": 18057.343527356534,
+        "upper_gradient": -17716.65795214782,
+        "lower_flux": 0.05584739091453774,
+        "upper_flux": 0.05479372538124374,
+        "mean_wall_flux": 0.05532055814789074
+      },
+      "passed": true
+    },
+    {
+      "field": "H2",
+      "latest_time": 14.499815395987236,
+      "balance_field": "H2Mean",
+      "balance_time": 14.499815395987236,
+      "balance_mode": "window_mean",
+      "balance_window": [
+        13.599939892153357,
+        14.499815395987236
+      ],
+      "source_mean_per_s": 5.567004,
+      "expected_mean_wall_flux": 0.05567004,
+      "measured_mean_wall_flux": 0.05633900158846114,
+      "measured_mean_wall_flux_cumulative": 0.0538533264563103,
+      "measured_mean_wall_flux_instantaneous": 0.05448081314178341,
+      "balance_relative_error": 0.012016545855924364,
+      "balance_fraction_of_target": 1.0120165458559243,
+      "flatness_history": [
+        {
+          "time": 13.599939892153357,
+          "cell_mean": 20.719592538611657,
+          "volume_weighted_mean": 27.528763397601928
+        },
+        {
+          "time": 13.699809615913114,
+          "cell_mean": 20.806171459991113,
+          "volume_weighted_mean": 27.52471960546797
+        },
+        {
+          "time": 13.799858419310073,
+          "cell_mean": 20.795383216150093,
+          "volume_weighted_mean": 27.513356871079324
+        },
+        {
+          "time": 13.899978645910755,
+          "cell_mean": 20.75313277744188,
+          "volume_weighted_mean": 27.498007405300033
+        },
+        {
+          "time": 13.999934624944371,
+          "cell_mean": 20.714087776482337,
+          "volume_weighted_mean": 27.50157909039081
+        },
+        {
+          "time": 14.09983284279013,
+          "cell_mean": 20.703038691740005,
+          "volume_weighted_mean": 27.507090068290584
+        },
+        {
+          "time": 14.199829796379623,
+          "cell_mean": 20.763978056886906,
+          "volume_weighted_mean": 27.504123704752185
+        },
+        {
+          "time": 14.299873558539545,
+          "cell_mean": 20.770882312926435,
+          "volume_weighted_mean": 27.486368363383452
+        },
+        {
+          "time": 14.399931614652617,
+          "cell_mean": 20.778918090333214,
+          "volume_weighted_mean": 27.472104758866713
+        },
+        {
+          "time": 14.499815395987236,
+          "cell_mean": 20.70346225935989,
+          "volume_weighted_mean": 27.468262817050718
+        }
+      ],
+      "flatness_mean_type": "volume",
+      "flatness_relative_range": 0.0021999861025167717,
+      "flatness_relative_range_arithmetic": 0.004970046774083818,
+      "minimum_flatness_snapshots": 3,
+      "balance_tolerance_fraction": 0.05,
+      "flatness_tolerance_fraction": 0.01,
+      "wall_flux_detail": {
+        "lower_gradient": 36858.330342800655,
+        "upper_gradient": -36006.860958825884,
+        "lower_flux": 0.05699735345880351,
+        "upper_flux": 0.055680649718118765,
+        "mean_wall_flux": 0.05633900158846114
+      },
+      "instantaneous_wall_flux_detail": {
+        "lower_gradient": 35200.76582178469,
+        "upper_gradient": -35261.16569844423,
+        "lower_flux": 0.05443411225914963,
+        "upper_flux": 0.054527514024417176,
+        "mean_wall_flux": 0.05448081314178341
+      },
+      "passed": true
+    }
+  ]
+}

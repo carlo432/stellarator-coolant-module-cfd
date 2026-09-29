@@ -56,6 +56,8 @@ The integrated write-up is [docs/final_report_draft_v0.md](docs/final_report_dra
 ```
 cases/
   baseline_module/     Gmsh .geo geometry and OpenFOAM case setups (v2–v31)
+  branch_d/            CHT, LES and coupled-load cases, with their generator and
+                       analysis scripts (see below)
   arc_blanket_2d*/     2-D ARC liquid-immersion blanket rebuilds
   hpc1_channel_*/      periodic-channel LES mesh/decomposition preflight
 scripts/               case builders, post-processing, GCI, correlation checks, plotting,
@@ -68,9 +70,24 @@ references/            bibliography (references.bib)
 ```
 
 Case directories hold setup files only (`system/`, `constant/`, `0/`, geometry sources). Meshes, time
-directories and solver logs are excluded for size; regenerate them from the `.geo` files with Gmsh and
-`gmshToFoam`. The CHT and LES case directories that `scripts/` read from `cases/branch_d/` are not yet
-in this repository.
+directories, solver logs and files over 1 MB are excluded for size; regenerate them from the `.geo`
+files with Gmsh and `gmshToFoam`, or with the `gen_*.py` / `make_*` scripts in `cases/branch_d/`.
+
+`cases/branch_d/` groups the higher-fidelity work:
+
+| Cases | Study |
+|---|---|
+| `v22`–`v31` | outlet-offset, 90° bend and backward-facing-step geometries (RANS, URANS, LES) |
+| `cht_*`, `cht_wr_U*` | conjugate heat transfer: mesh study, wall-resolved bridge, velocity sweep |
+| `c2_*`, `c7_*`, `c13_*` | curved first-wall slice CHT, curved velocity sweep, curvature sweep |
+| `c3_*`, `openmc_*` | OpenMC volumetric heating mapped into CHT |
+| `geom_*` | plasma-load pipeline: shaped wall loads, phase and sensitivity sweeps, tritium, MHD drag |
+| `a1_*`, `a2_*`, `a3_*`, `c1_*` | 3-D OpenMC torus sector, coil/SOL surrogate, variable-property CHT, wall-load inverse design |
+| `les_channel_*`, `c9_thermal_gateclose`, `c14_*` | periodic-channel LES: momentum benchmarks, Pr = 5 thermal certification, Pr = 14.4 transfer check |
+
+The Pr = 5 thermal-LES check compares against Kawamura et al. (1998) DNS profiles digitized from the
+paper's figures (`kawamura_pr5_dns_digitized/`), with an estimated reading accuracy of about ±1 Θ⁺ unit.
+It is not a comparison against tabulated DNS data.
 
 ## Requirements
 

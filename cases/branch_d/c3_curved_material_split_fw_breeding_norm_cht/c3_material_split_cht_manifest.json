@@ -1,0 +1,23 @@
+{
+  "case": "cases/branch_d/c3_curved_material_split_fw_breeding_norm_cht",
+  "basis": "C2 curved CHT geometry with external base flux disabled",
+  "target_id": "c3_ms_fw_breeding_norm",
+  "target_csv": "/root/revengence/results/c3_material_split_targets.csv",
+  "literature_basis": "Yamanishi 1998 reports about 90% of total nuclear heating in first wall plus breeding zone; normalize 55% FLiBe and 35% local non-FLiBe to that region",
+  "solver_use": "primary material-split run; same total power retained inside the local first-wall/breeding-zone module",
+  "target_heat_flux_W_m2": 100000.0,
+  "heated_base_area_m2": 0.004270320390687767,
+  "total_power_W": 427.0320390687767,
+  "target_card_total_reference_power_W": 427.032,
+  "fluid_fraction": 0.6111111111,
+  "solid_fraction": 0.3888888889,
+  "fluid_power_W": 260.9640238706188,
+  "solid_power_W": 166.06801519815798,
+  "target_card_fluid_power_W": 260.9639,
+  "target_card_solid_power_W": 166.0681,
+  "source_method": "scalarSemiImplicitSource on h in bottomWater and heater regions; volumeMode absolute",
+  "radial_cells": 50,
+  "solid_cells": 8,
+  "end_time": 400,
+  "write_interval": 400
+}

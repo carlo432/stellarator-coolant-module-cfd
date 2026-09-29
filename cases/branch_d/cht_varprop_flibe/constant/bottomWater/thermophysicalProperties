@@ -1,0 +1,11 @@
+FoamFile { version 2.0; format ascii; class dictionary; object thermophysicalProperties; }
+thermoType { type heRhoThermo; mixture pureMixture; transport polynomial; thermo hPolynomial; equationOfState icoPolynomial; specie specie; energy sensibleEnthalpy; }
+mixture {
+ specie { molWeight 33; }
+ equationOfState { rhoCoeffs<8> ( 1940 0 0 0 0 0 0 0 ); }
+ thermodynamics { Hf 0; Sf 0; CpCoeffs<8> ( 2400 0 0 0 0 0 0 0 ); }
+ transport {
+  muCoeffs<8>    ( 5.27782011e-01 -1.78013470e-03 2.31281728e-06 -1.35799284e-09 3.02484972e-13 0 0 0 );
+  kappaCoeffs<8> ( 1.0 0 0 0 0 0 0 0 );
+ }
+}

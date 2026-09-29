@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile { version 2.0; format ascii; class dictionary; object blockMeshDict; }
+// CHT channel: fluid duct (y 0->0.02) over a solid slab (y -0.004->0).
+// External heat flux on the solid base (y=-0.004) conducts to the y=0 fluid-solid interface.
+scale 1;
+
+vertices
+(
+    ( 0.0  -0.004  0.0 )   // 0
+    ( 0.4  -0.004  0.0 )   // 1
+    ( 0.4  -0.004  0.04)   // 2
+    ( 0.0  -0.004  0.04)   // 3
+    ( 0.0   0.0    0.0 )   // 4  interface
+    ( 0.4   0.0    0.0 )   // 5
+    ( 0.4   0.0    0.04)   // 6
+    ( 0.0   0.0    0.04)   // 7
+    ( 0.0   0.02   0.0 )   // 8  fluid top
+    ( 0.4   0.02   0.0 )   // 9
+    ( 0.4   0.02   0.04)   // 10
+    ( 0.0   0.02   0.04)   // 11
+);
+
+blocks
+(
+    hex (0 1 5 4 3 2 6 7)   (48  5  5) simpleGrading (1 1 1)   // solid slab
+    hex (4 5 9 8 7 6 10 11) (48 14  5) simpleGrading (1 1 1)   // fluid duct
+);
+
+edges ();
+
+boundary
+(
+    inlet      { type patch; faces ( (4 8 11 7) ); }
+    outlet     { type patch; faces ( (5 9 10 6) ); }
+    fluidTop   { type wall;  faces ( (8 9 10 11) ); }
+    heatedBase { type wall;  faces ( (0 3 2 1) ); }
+    fluidSides { type wall;  faces ( (4 5 9 8) (7 6 10 11) ); }
+    solidSides { type wall;  faces ( (0 4 7 3) (1 5 6 2) (0 1 5 4) (3 2 6 7) ); }
+);
+
+mergePatchPairs ();

@@ -1,0 +1,26 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      turbulenceProperties;
+}
+// First LES smoke test on the bent geometry. WALE SGS model, wall-modeled (coarse
+// 73k RANS mesh -> illustrative, NOT wall-resolved LES). Goal: do resolved velocity
+// fluctuations emerge that the k-omegaSST URANS (v25) averaged away?
+
+simulationType  LES;
+
+LES
+{
+    LESModel        WALE;
+    turbulence      on;
+    printCoeffs     on;
+    delta           cubeRootVol;
+
+    cubeRootVolCoeffs
+    {
+        deltaCoeff      1;
+    }
+}

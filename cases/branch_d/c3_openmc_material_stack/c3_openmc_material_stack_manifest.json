@@ -1,0 +1,68 @@
+{
+  "case": "cases/branch_d/c3_openmc_material_stack",
+  "cross_sections": "/root/openmc_data/combined_neutron_photon_all.xml",
+  "openmc_exec": "/root/openmc-src/build/bin/openmc",
+  "front_wall_thickness_m": 0.005,
+  "flibe_thickness_m": 0.02,
+  "back_wall_thickness_m": 0.005,
+  "half_width_m": 0.008,
+  "half_height_m": 0.008,
+  "bins": 30,
+  "particles": 4000,
+  "batches": 8,
+  "li6_fraction": 0.9,
+  "target_power_W": 427.0320391,
+  "target_heat_flux_W_m2": 100000.0,
+  "run_requested": true,
+  "total_thickness_m": 0.030000000000000002,
+  "region_bounds_m": {
+    "front_wall": [
+      0.0,
+      0.005
+    ],
+    "flibe": [
+      0.005,
+      0.025
+    ],
+    "back_wall": [
+      0.025,
+      0.030000000000000002
+    ]
+  },
+  "cell_ids": {
+    "front_wall": 1,
+    "flibe": 2,
+    "back_wall": 3
+  },
+  "material_ids": {
+    "front_wall": 1,
+    "flibe": 2,
+    "back_wall": 3
+  },
+  "summary": {
+    "case": "cases/branch_d/c3_openmc_material_stack",
+    "statepoint": "cases/branch_d/c3_openmc_material_stack/statepoint.8.h5",
+    "status": "C3 material-stack OpenMC source-placement tally; not reactor neutronics",
+    "total_thickness_m": 0.030000000000000002,
+    "bins": 30,
+    "target_power_W": 427.0320391,
+    "target_heat_flux_W_m2": 100000.0,
+    "reference_area_m2": 0.004270320391,
+    "cell_total_heating_eV_per_source": 15375.36065841643,
+    "depth_total_heating_eV_per_source": 15375.360658417141,
+    "cell_total_heating_J_per_source": 2.4634043586237656e-15,
+    "fluid_fraction": 0.4718877897449688,
+    "solid_fraction": 0.5281122102550311,
+    "fluid_power_W": 201.51120508118612,
+    "solid_power_W": 225.52083401881384,
+    "front_wall_power_W": 112.772011278833,
+    "flibe_power_W": 201.51120508118612,
+    "back_wall_power_W": 112.74882273998085,
+    "max_region_relative_uncertainty": 0.0007770175163158275,
+    "max_depth_relative_uncertainty": 0.0007868079314073756,
+    "region_csv": "cases/branch_d/figs/c3_openmc_material_stack_heating_split_region_split.csv",
+    "depth_csv": "cases/branch_d/figs/c3_openmc_material_stack_heating_split_depth_profile.csv",
+    "region_depth_csv": "cases/branch_d/figs/c3_openmc_material_stack_heating_split_region_depth.csv",
+    "png": "cases/branch_d/figs/c3_openmc_material_stack_heating_split.png"
+  }
+}

@@ -1,0 +1,231 @@
+FoamFile
+{
+    version 2.0; format ascii; class dictionary; object controlDict;
+}
+application pimpleFoam;
+startFrom latestTime;
+startTime 0;
+stopAt endTime;
+endTime 5.0;
+deltaT 0.0002;
+writeControl adjustableRunTime;
+writeInterval 0.1;
+purgeWrite 3;
+writeFormat ascii;
+writePrecision 8;
+writeCompression off;
+timeFormat general;
+timePrecision 8;
+runTimeModifiable true;
+adjustTimeStep yes;
+maxCo 0.6;
+maxDeltaT 0.001;
+functions
+{
+    fieldAverage1
+    {
+        type fieldAverage; libs (fieldFunctionObjects);
+        writeControl writeTime;
+        timeStart 4.3;
+        fields ( U { mean on; prime2Mean on; base time; } T { mean on; prime2Mean on; base time; }
+                 Ctrit { mean on; prime2Mean off; base time; } Ctrit_w5 { mean on; prime2Mean off; base time; } Ctrit_w4 { mean on; prime2Mean off; base time; } Ctrit_w3 { mean on; prime2Mean off; base time; } Ctrit_w2 { mean on; prime2Mean off; base time; } Ctrit_w1 { mean on; prime2Mean off; base time; } Ctrit_w0 { mean on; prime2Mean off; base time; } );
+    }
+    transportT
+    {
+        type scalarTransport; libs (solverFunctionObjects);
+        field T; schemesField U; resetOnStartUp false;
+        alphaD 0.069444444; alphaDt 1.1111111;
+        fvOptions
+        {
+            qzone0_T { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone0; volumeMode specific; sources { T (0.73426 0); } }
+            qzone1_T { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone1; volumeMode specific; sources { T (0.756921 0); } }
+            qzone2_T { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone2; volumeMode specific; sources { T (0.77123 0); } }
+            qzone3_T { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone3; volumeMode specific; sources { T (0.780673 0); } }
+            qzone4_T { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone4; volumeMode specific; sources { T (0.786171 0); } }
+            qzone5_T { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone5; volumeMode specific; sources { T (0.789168 0); } }
+        }
+    }
+    transportCtrit
+    {
+        type scalarTransport; libs (solverFunctionObjects);
+        field Ctrit; schemesField U; resetOnStartUp false;
+        alphaD 0.069444444; alphaDt 1.1111111;
+        fvOptions
+        {
+            qzone0_Ctrit { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone0; volumeMode specific; sources { Ctrit (6.52606e-07 0); } }
+            qzone1_Ctrit { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone1; volumeMode specific; sources { Ctrit (7.74173e-07 0); } }
+            qzone2_Ctrit { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone2; volumeMode specific; sources { Ctrit (8.73397e-07 0); } }
+            qzone3_Ctrit { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone3; volumeMode specific; sources { Ctrit (9.61125e-07 0); } }
+            qzone4_Ctrit { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone4; volumeMode specific; sources { Ctrit (1.04044e-06 0); } }
+            qzone5_Ctrit { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone5; volumeMode specific; sources { Ctrit (1.1091e-06 0); } }
+        }
+    }
+    transportCtrit_w5
+    {
+        type scalarTransport; libs (solverFunctionObjects);
+        field Ctrit_w5; schemesField U; resetOnStartUp false;
+        alphaD 0.069444444; alphaDt 1.1111111;
+        fvOptions
+        {
+            qzone0_Ctrit_w5 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone0; volumeMode specific; sources { Ctrit_w5 (6.52606e-07 0); } }
+            qzone1_Ctrit_w5 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone1; volumeMode specific; sources { Ctrit_w5 (7.74173e-07 0); } }
+            qzone2_Ctrit_w5 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone2; volumeMode specific; sources { Ctrit_w5 (8.73397e-07 0); } }
+            qzone3_Ctrit_w5 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone3; volumeMode specific; sources { Ctrit_w5 (9.61125e-07 0); } }
+            qzone4_Ctrit_w5 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone4; volumeMode specific; sources { Ctrit_w5 (1.04044e-06 0); } }
+            qzone5_Ctrit_w5 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone5; volumeMode specific; sources { Ctrit_w5 (1.1091e-06 0); } }
+        }
+    }
+    transportCtrit_w4
+    {
+        type scalarTransport; libs (solverFunctionObjects);
+        field Ctrit_w4; schemesField U; resetOnStartUp false;
+        alphaD 0.069444444; alphaDt 1.1111111;
+        fvOptions
+        {
+            qzone0_Ctrit_w4 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone0; volumeMode specific; sources { Ctrit_w4 (6.52606e-07 0); } }
+            qzone1_Ctrit_w4 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone1; volumeMode specific; sources { Ctrit_w4 (7.74173e-07 0); } }
+            qzone2_Ctrit_w4 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone2; volumeMode specific; sources { Ctrit_w4 (8.73397e-07 0); } }
+            qzone3_Ctrit_w4 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone3; volumeMode specific; sources { Ctrit_w4 (9.61125e-07 0); } }
+            qzone4_Ctrit_w4 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone4; volumeMode specific; sources { Ctrit_w4 (1.04044e-06 0); } }
+            qzone5_Ctrit_w4 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone5; volumeMode specific; sources { Ctrit_w4 (1.1091e-06 0); } }
+        }
+    }
+    transportCtrit_w3
+    {
+        type scalarTransport; libs (solverFunctionObjects);
+        field Ctrit_w3; schemesField U; resetOnStartUp false;
+        alphaD 0.069444444; alphaDt 1.1111111;
+        fvOptions
+        {
+            qzone0_Ctrit_w3 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone0; volumeMode specific; sources { Ctrit_w3 (6.52606e-07 0); } }
+            qzone1_Ctrit_w3 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone1; volumeMode specific; sources { Ctrit_w3 (7.74173e-07 0); } }
+            qzone2_Ctrit_w3 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone2; volumeMode specific; sources { Ctrit_w3 (8.73397e-07 0); } }
+            qzone3_Ctrit_w3 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone3; volumeMode specific; sources { Ctrit_w3 (9.61125e-07 0); } }
+            qzone4_Ctrit_w3 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone4; volumeMode specific; sources { Ctrit_w3 (1.04044e-06 0); } }
+            qzone5_Ctrit_w3 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone5; volumeMode specific; sources { Ctrit_w3 (1.1091e-06 0); } }
+        }
+    }
+    transportCtrit_w2
+    {
+        type scalarTransport; libs (solverFunctionObjects);
+        field Ctrit_w2; schemesField U; resetOnStartUp false;
+        alphaD 0.069444444; alphaDt 1.1111111;
+        fvOptions
+        {
+            qzone0_Ctrit_w2 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone0; volumeMode specific; sources { Ctrit_w2 (6.52606e-07 0); } }
+            qzone1_Ctrit_w2 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone1; volumeMode specific; sources { Ctrit_w2 (7.74173e-07 0); } }
+            qzone2_Ctrit_w2 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone2; volumeMode specific; sources { Ctrit_w2 (8.73397e-07 0); } }
+            qzone3_Ctrit_w2 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone3; volumeMode specific; sources { Ctrit_w2 (9.61125e-07 0); } }
+            qzone4_Ctrit_w2 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone4; volumeMode specific; sources { Ctrit_w2 (1.04044e-06 0); } }
+            qzone5_Ctrit_w2 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone5; volumeMode specific; sources { Ctrit_w2 (1.1091e-06 0); } }
+        }
+    }
+    transportCtrit_w1
+    {
+        type scalarTransport; libs (solverFunctionObjects);
+        field Ctrit_w1; schemesField U; resetOnStartUp false;
+        alphaD 0.069444444; alphaDt 1.1111111;
+        fvOptions
+        {
+            qzone0_Ctrit_w1 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone0; volumeMode specific; sources { Ctrit_w1 (6.52606e-07 0); } }
+            qzone1_Ctrit_w1 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone1; volumeMode specific; sources { Ctrit_w1 (7.74173e-07 0); } }
+            qzone2_Ctrit_w1 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone2; volumeMode specific; sources { Ctrit_w1 (8.73397e-07 0); } }
+            qzone3_Ctrit_w1 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone3; volumeMode specific; sources { Ctrit_w1 (9.61125e-07 0); } }
+            qzone4_Ctrit_w1 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone4; volumeMode specific; sources { Ctrit_w1 (1.04044e-06 0); } }
+            qzone5_Ctrit_w1 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone5; volumeMode specific; sources { Ctrit_w1 (1.1091e-06 0); } }
+        }
+    }
+    transportCtrit_w0
+    {
+        type scalarTransport; libs (solverFunctionObjects);
+        field Ctrit_w0; schemesField U; resetOnStartUp false;
+        alphaD 0.069444444; alphaDt 1.1111111;
+        fvOptions
+        {
+            qzone0_Ctrit_w0 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone0; volumeMode specific; sources { Ctrit_w0 (6.52606e-07 0); } }
+            qzone1_Ctrit_w0 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone1; volumeMode specific; sources { Ctrit_w0 (7.74173e-07 0); } }
+            qzone2_Ctrit_w0 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone2; volumeMode specific; sources { Ctrit_w0 (8.73397e-07 0); } }
+            qzone3_Ctrit_w0 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone3; volumeMode specific; sources { Ctrit_w0 (9.61125e-07 0); } }
+            qzone4_Ctrit_w0 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone4; volumeMode specific; sources { Ctrit_w0 (1.04044e-06 0); } }
+            qzone5_Ctrit_w0 { type scalarSemiImplicitSource; selectionMode cellZone; cellZone qzone5; volumeMode specific; sources { Ctrit_w0 (1.1091e-06 0); } }
+        }
+    }
+    yPlus1 { type yPlus; libs (fieldFunctionObjects); writeControl writeTime; }
+    inletPhi
+    {
+        type surfaceFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 20; writeFields false;
+        regionType patch; name inlet;
+        operation sum; fields (phi);
+    }
+    outletPhi
+    {
+        type surfaceFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 20; writeFields false;
+        regionType patch; name outlet;
+        operation sum; fields (phi);
+    }
+    inletScal
+    {
+        type surfaceFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 20; writeFields false;
+        regionType patch; name inlet;
+        operation weightedAverage; weightField phi; fields (T Ctrit Ctrit_w5 Ctrit_w4 Ctrit_w3 Ctrit_w2 Ctrit_w1 Ctrit_w0);
+    }
+    outletScal
+    {
+        type surfaceFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 20; writeFields false;
+        regionType patch; name outlet;
+        operation weightedAverage; weightField phi; fields (T Ctrit Ctrit_w5 Ctrit_w4 Ctrit_w3 Ctrit_w2 Ctrit_w1 Ctrit_w0);
+    }
+    fwT
+    {
+        type surfaceFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 20; writeFields false;
+        regionType patch; name heated_first_wall;
+        operation areaAverage; writeArea true; fields (T);
+    }
+    qzone0_stats
+    {
+        type volFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 100; writeFields false;
+        regionType cellZone; name qzone0; operation volAverage; writeVolume true;
+        fields (T Ctrit Ctrit_w5 Ctrit_w4 Ctrit_w3 Ctrit_w2 Ctrit_w1 Ctrit_w0);
+    }
+    qzone1_stats
+    {
+        type volFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 100; writeFields false;
+        regionType cellZone; name qzone1; operation volAverage; writeVolume true;
+        fields (T Ctrit Ctrit_w5 Ctrit_w4 Ctrit_w3 Ctrit_w2 Ctrit_w1 Ctrit_w0);
+    }
+    qzone2_stats
+    {
+        type volFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 100; writeFields false;
+        regionType cellZone; name qzone2; operation volAverage; writeVolume true;
+        fields (T Ctrit Ctrit_w5 Ctrit_w4 Ctrit_w3 Ctrit_w2 Ctrit_w1 Ctrit_w0);
+    }
+    qzone3_stats
+    {
+        type volFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 100; writeFields false;
+        regionType cellZone; name qzone3; operation volAverage; writeVolume true;
+        fields (T Ctrit Ctrit_w5 Ctrit_w4 Ctrit_w3 Ctrit_w2 Ctrit_w1 Ctrit_w0);
+    }
+    qzone4_stats
+    {
+        type volFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 100; writeFields false;
+        regionType cellZone; name qzone4; operation volAverage; writeVolume true;
+        fields (T Ctrit Ctrit_w5 Ctrit_w4 Ctrit_w3 Ctrit_w2 Ctrit_w1 Ctrit_w0);
+    }
+    qzone5_stats
+    {
+        type volFieldValue; libs (fieldFunctionObjects);
+        log false; writeControl timeStep; writeInterval 100; writeFields false;
+        regionType cellZone; name qzone5; operation volAverage; writeVolume true;
+        fields (T Ctrit Ctrit_w5 Ctrit_w4 Ctrit_w3 Ctrit_w2 Ctrit_w1 Ctrit_w0);
+    }
+}
