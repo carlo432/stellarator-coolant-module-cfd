@@ -31,7 +31,7 @@ geometry that isolates how coolant flow structure governs wall temperature.
   under refinement, so peak values are reported as same-mesh diagnostics only.
 
 <p align="center">
-  <img src="results/report_figures/35_central_finding_onepager.png" width="85%" alt="Central finding">
+  <img src="results/report_figures/35_central_finding_onepager.png?v=2" width="85%" alt="Central finding">
 </p>
 
 ## Fidelity ladder
