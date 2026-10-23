@@ -46,21 +46,21 @@ def plot() -> tuple[Path, Path]:
     ax1.scatter(speeds, peaks, s=78, color="#2f9e44")
     for x, y, label in zip(speeds, peaks, labels):
         if label == "90-deg bend":
-            offset = (-62, -11)
+            offset, ha = (-10, -3), "right"
         elif label == "backward-facing step":
-            offset = (8, -14)
+            offset, ha = (-6, 9), "left"
         elif label == "outlet-offset":
-            offset = (8, -8)
+            offset, ha = (8, -12), "left"
         else:
-            offset = (8, 8)
-        ax1.annotate(label, (x, y), xytext=offset, textcoords="offset points", fontsize=7.5)
+            offset, ha = (8, 8), "left"
+        ax1.annotate(label, (x, y), xytext=offset, textcoords="offset points", fontsize=7.5, ha=ha)
     ax1.set_xlabel("near-wall mean speed [m/s]")
     ax1.set_ylabel("passive peak dT [K]")
     ax1.set_title("Velocity Mechanism")
     ax1.set_xlim(0.24, 0.95)
-    ax1.set_ylim(58.7, 79.0)
+    ax1.set_ylim(58.7, 80.0)
     ax1.grid(True, alpha=0.25)
-    ax1.text(0.03, 0.06, "passive peak = hotspot diagnostic", transform=ax1.transAxes, fontsize=7.6, color="#495057")
+    ax1.text(0.97, 0.80, "passive peak =\nhotspot diagnostic", transform=ax1.transAxes, fontsize=7.6, color="#495057", ha="right", va="top")
 
     ax2 = fig.add_subplot(gs[0, 1])
     names = ["passive\npeak", "CHT\nbridge", "Gnielinski"]
@@ -91,11 +91,8 @@ def plot() -> tuple[Path, Path]:
     ax3.plot(pump, interface, marker="o", color="#e67700")
     for x, y, re in zip(pump, interface, re_values):
         if re in {"5000", "10000", "20000"}:
-            if re == "20000":
-                offset = (-50, 8)
-            else:
-                offset = (6, 8)
-            ax3.annotate(f"Re {re}", (x, y), xytext=offset, textcoords="offset points", fontsize=7.4)
+            offset, ha = ((-4, -15), "right") if re == "20000" else ((7, 6), "left")
+            ax3.annotate(f"Re {re}", (x, y), xytext=offset, textcoords="offset points", fontsize=7.4, ha=ha)
     ax3.set_xscale("log")
     ax3.set_xlabel("hydraulic pumping power [W]")
     ax3.set_ylabel("interface dT [K]")
@@ -103,7 +100,7 @@ def plot() -> tuple[Path, Path]:
     ax3.set_xlim(min(pump) * 0.8, max(pump) * 1.45)
     ax3.set_ylim(14.2, 50.8)
     ax3.grid(True, which="both", alpha=0.25)
-    ax3.text(0.03, 0.06, exponent_note, transform=ax3.transAxes, fontsize=7.6, color="#495057")
+    ax3.text(0.97, 0.95, exponent_note.replace("; ", "\n"), transform=ax3.transAxes, fontsize=7.6, color="#495057", ha="right", va="top")
 
     ax4 = fig.add_subplot(gs[1, :])
     ax4.axis("off")
